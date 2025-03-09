@@ -1,15 +1,9 @@
 "use client";
 import React from "react";
 import ProductCard from "@/components/ProductCard";
-import { Box, Divider, List, ListItem, ListItemText, Typography } from "@mui/material";
-import { useRouter } from 'next/navigation';
+import { Box, Divider, Typography } from "@mui/material";
 
 const ResultsPage = () => {
-    const router = useRouter();
-
-    const handleLearnMore = () => {
-        router.push("/results-page");
-    };
 
     const products = [
         {
@@ -175,24 +169,6 @@ const ResultsPage = () => {
                             Explore Related Products
                         </Typography>
                         <Divider />
-                        {/* <List>
-                            <ListItem button>
-                                <ListItemText primary="Home Improvement" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Food Storage" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Garage Organization" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Dog Supplies" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemText primary="Glass Containers" />
-                            </ListItem>
-                            
-                        </List> */}
                     </Box>
 
                 </Box>

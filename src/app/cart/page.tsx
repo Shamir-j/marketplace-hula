@@ -97,7 +97,7 @@ const ShoppingCart = () => {
                         <SubtotalSection subtotal="$119.98" />
                     </Box>
 
-                    <Typography mt={2} fontSize={14} color="#000000">The price and availability of items at Hula.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price. Learn more</Typography>
+                    <Typography mt={2} fontSize={14} color="#000000">The price and availability of items at Hula.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item&#39;s most recent price. Learn more</Typography>
 
                 </Box>
 

@@ -10,14 +10,7 @@ interface CustomCardProps {
     images: { src: string; alt: string; caption: string }[];
 }
 
-const CustomCard: React.FC<CustomCardProps> = ({
-    title,
-    subtitle,
-    description,
-    actionLabel,
-    onActionClick,
-    images,
-}) => {
+const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel, onActionClick, images}) => {
     return (
         <Card sx={{ maxWidth: 350, margin: "0px", boxShadow: 0, borderRadius: 0 }}>
             <CardContent>
@@ -26,9 +19,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
                         {title}
                     </Typography>
                 )}
-                {/* <Typography variant="body2" color="text.secondary" mb={2}>
+                <Typography variant="body2" color="text.secondary" mb={2}>
                     {description}
-                </Typography> */}
+                </Typography>
 
                 <Box display="flex" flexWrap="wrap" justifyContent="space-between">
                     {images.map((image, index) => (

@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import CustomCard from "./CustomCard";
-import { cardData, carouselData } from "@/app/constants/constants";
+import { cardData } from "@/app/constants/constants";
 import ExampleCarousel from "./Carousel";
 import { useRouter } from 'next/navigation';
 

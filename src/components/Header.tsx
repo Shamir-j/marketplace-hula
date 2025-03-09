@@ -1,21 +1,16 @@
 "use client";
 
-import { Box, Typography, InputBase, IconButton, Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Box, Typography, InputBase, IconButton, Button, MenuItem, Select } from "@mui/material";
 import { Search, ShoppingCart, Menu as MenuIcon } from "@mui/icons-material";
 import React, { useState } from "react";
 
 const Header = () => {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const [, setAnchorEl] = useState<null | HTMLElement>(null);
     const [selectedValue, setSelectedValue] = useState("option1"); // Set initial state for "All Departments"
 
     const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
-
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-    };
-
 
     const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setSelectedValue(event.target.value);

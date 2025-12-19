@@ -35,7 +35,14 @@ export const cardData = [
     },
     {
         id: 4,
-        title: "Shop for your home essentials",
+        title: "Kitchen essentials",
+        subtitle: "Category 4",
+        description: "This is a brief description of the product. It highlights key features or benefits.",
+        actionLabel: "Discover more in Home"
+    },
+       {
+        id: 5,
+        title: "Home essentials",
         subtitle: "Category 4",
         description: "This is a brief description of the product. It highlights key features or benefits.",
         actionLabel: "Discover more in Home"

@@ -1,6 +1,6 @@
-import React from 'react';
-import Carousel from 'react-material-ui-carousel';
-import { Paper, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { Paper, Box, IconButton } from '@mui/material';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 interface CarouselItemProps {
     item: {
@@ -36,15 +36,15 @@ const items = [
             "https://placehold.co/600x400?text=Second+Image+1",
             "https://placehold.co/600x400?text=Second+Image+2",
             "https://placehold.co/600x400?text=Second+Image+3",
-            "https://placehold.co/600x400?text=Second+Image+1",
-            "https://placehold.co/600x400?text=Second+Image+2",
-            "https://placehold.co/600x400?text=Second+Image+3",
-            "https://placehold.co/600x400?text=Second+Image+1",
-            "https://placehold.co/600x400?text=Second+Image+2",
-            "https://placehold.co/600x400?text=Second+Image+3",
-            "https://placehold.co/600x400?text=Second+Image+1",
-            "https://placehold.co/600x400?text=Second+Image+2",
-            "https://placehold.co/600x400?text=Second+Image+3"
+            "https://placehold.co/600x400?text=Second+Image+4",
+            "https://placehold.co/600x400?text=Second+Image+5",
+            "https://placehold.co/600x400?text=Second+Image+6",
+            "https://placehold.co/600x400?text=Second+Image+7",
+            "https://placehold.co/600x400?text=Second+Image+8",
+            "https://placehold.co/600x400?text=Second+Image+9",
+            "https://placehold.co/600x400?text=Second+Image+10",
+            "https://placehold.co/600x400?text=Second+Image+11",
+            "https://placehold.co/600x400?text=Second+Image+12"
         ]
     },
     {
@@ -68,42 +68,99 @@ const items = [
 ];
 
 const ExampleCarousel: React.FC = () => {
-    return (
-        <Carousel
-            animation="slide"
-            interval={4000}          // Time in milliseconds each slide is shown
-            indicators={false}        // Shows dots to indicate the number of slides
-            navButtonsAlwaysVisible  // Always shows the next/previous buttons
-        >
-            {items.map((item, index) => (
-                <CarouselItem key={index} item={item} />
-            ))}
-        </Carousel>
-    );
-};
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const scrollRef = React.useRef<HTMLDivElement>(null);
 
-const CarouselItem: React.FC<CarouselItemProps> = ({ item }) => {
+    const handleNext = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft += 200;
+        }
+    };
+
+    const handlePrev = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft -= 200;
+        }
+    };
+
     return (
-        <Paper sx={{ position: 'relative', overflow: 'hidden', height: 250 }}>
-            <Box display="flex" justifyContent="space-around" alignItems="center" padding={2} height="100%">
-                <Box sx={{ display: "flex", flexDirection: "row", gap: 2, height: "100%" }}>
-                    {item.images.map((image, idx) => (
-                        <Box
-                            key={idx}
-                            component="img"
-                            src={image}
-                            alt={`${item.name} - Image ${idx + 1}`}
-                            sx={{
-                                width: "150px",
-                                height: "100%", // Match the Paper's height
-                                borderRadius: 1,
-                                objectFit: "cover",
-                            }}
-                        />
-                    ))}
+        <Box sx={{ position: 'relative', width: '100%' }}>
+            <Paper sx={{ position: 'relative', overflow: 'hidden', height: 250 }}>
+                <Box display="flex" justifyContent="space-between" alignItems="center" padding={2} height="100%">
+                    <IconButton onClick={handlePrev} sx={{ position: 'absolute', left: 8, zIndex: 10 }}>
+                        <ChevronLeft />
+                    </IconButton>
+
+                    <Box
+                        ref={scrollRef}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            gap: 2,
+                            height: "100%",
+                            overflowX: "auto",
+                            overflowY: "hidden",
+                            scrollBehavior: "smooth",
+                            "&::-webkit-scrollbar": {
+                                height: "8px"
+                            },
+                            "&::-webkit-scrollbar-track": {
+                                background: "#f1f1f1",
+                                borderRadius: "10px"
+                            },
+                            "&::-webkit-scrollbar-thumb": {
+                                background: "#888",
+                                borderRadius: "10px",
+                                "&:hover": {
+                                    background: "#555"
+                                }
+                            },
+                            flex: 1,
+                            margin: '0 50px',
+                            padding: '0 10px'
+                        }}
+                    >
+                        {items[currentSlide].images.map((image, idx) => (
+                            <Box
+                                key={idx}
+                                component="img"
+                                src={image}
+                                alt={`${items[currentSlide].name} - Image ${idx + 1}`}
+                                sx={{
+                                    minWidth: "150px",
+                                    height: "100%",
+                                    borderRadius: 1,
+                                    objectFit: "cover",
+                                    flexShrink: 0
+                                }}
+                            />
+                        ))}
+                    </Box>
+
+                    <IconButton onClick={handleNext} sx={{ position: 'absolute', right: 8, zIndex: 10 }}>
+                        <ChevronRight />
+                    </IconButton>
                 </Box>
+            </Paper>
+
+            {/* Slide Indicators */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, marginTop: 2 }}>
+                {items.map((_, index) => (
+                    <Box
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        sx={{
+                            width: currentSlide === index ? 16 : 12,
+                            height: currentSlide === index ? 16 : 12,
+                            borderRadius: '50%',
+                            backgroundColor: currentSlide === index ? '#1976d2' : '#ccc',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease'
+                        }}
+                    />
+                ))}
             </Box>
-        </Paper>
+        </Box>
     );
 };
 

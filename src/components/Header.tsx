@@ -2,6 +2,7 @@
 
 import { Box, Typography, InputBase, IconButton, Button, MenuItem, Select } from "@mui/material";
 import { Search, ShoppingCart, Menu as MenuIcon } from "@mui/icons-material";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -23,12 +24,14 @@ const Header = () => {
         <Box>
             <Box sx={{ backgroundColor: "#036A47", color: "white", padding: "8px 16px" }}>
                 <Box display="flex" alignItems="center" justifyContent="space-between">
-                    <Typography
-                        variant="body2"
-                        sx={{ alignSelf: "center", padding: 2, fontSize: 20, fontWeight: "bolder" }}
-                    >
-                        Hula Market
-                    </Typography>
+                    <Link href="/" style={{ textDecoration: "none" }}>
+                        <Typography
+                            variant="body2"
+                            sx={{ alignSelf: "center", padding: 2, fontSize: 20, fontWeight: "bolder", color: "white", cursor: "pointer", "&:hover": { opacity: 0.8 } }}
+                        >
+                            Hula Market
+                        </Typography>
+                    </Link>
 
                     <Box
                         display="flex"

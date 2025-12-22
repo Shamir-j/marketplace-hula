@@ -9,6 +9,7 @@ const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
     const [selectedValue, setSelectedValue] = useState("option1");
 
     const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -17,6 +18,10 @@ const Header = () => {
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const toggleDesktopMenu = () => {
+        setDesktopMenuOpen(!desktopMenuOpen);
     };
 
     const topMenuItems = ["Video", "Deals", "Books", "Hula Basics", "Buy Again", "Best Sellers"];
@@ -277,9 +282,25 @@ const Header = () => {
 
             {/* Navigation Menu */}
             {!isMobile ? (
-                // Desktop: Dark green navigation bar
+                // Desktop: Dark green navigation bar with "All" button
                 <Box sx={{ backgroundColor: "#085749", color: "white", padding: "8px 16px" }}>
                     <Box display="flex" alignItems="center" gap={2}>
+                        {/* All Button with Menu Icon */}
+                        <Button
+                            onClick={toggleDesktopMenu}
+                            color="inherit"
+                            startIcon={<MenuIcon />}
+                            sx={{
+                                textTransform: "none",
+                                fontSize: "13px",
+                                fontWeight: "600",
+                                padding: "4px 12px",
+                                backgroundColor: "rgba(255,255,255,0.1)",
+                                "&:hover": { backgroundColor: "rgba(255,255,255,0.2)", borderRadius: "4px" },
+                            }}
+                        >
+                            All
+                        </Button>
                         {bottomMenuItems.map((label) => (
                             <Button
                                 key={label}
@@ -329,36 +350,317 @@ const Header = () => {
                 onClose={toggleMobileMenu}
                 sx={{
                     "& .MuiDrawer-paper": {
-                        width: "280px",
-                        backgroundColor: "#f5f5f5",
+                        width: "320px",
+                        backgroundColor: "#fff",
                     },
                 }}
             >
+                {/* Header Section */}
                 <Box
                     sx={{
-                        padding: 2,
+                        padding: "20px 16px",
                         display: "flex",
-                        justifyContent: "space-between",
                         alignItems: "center",
-                        backgroundColor: "#036A47",
+                        gap: 2,
+                        backgroundColor: "#232f3e",
                         color: "white",
                     }}
                 >
-                    <Typography sx={{ fontWeight: "bold" }}>Hula Market Menu</Typography>
-                    <IconButton onClick={toggleMobileMenu} sx={{ color: "white" }}>
-                        <CloseIcon />
-                    </IconButton>
+                    <AccountCircle sx={{ fontSize: "32px" }} />
+                    <Typography sx={{ fontWeight: "bold", fontSize: "18px" }}>Hello, sign in</Typography>
                 </Box>
-                <List>
-                    {[...topMenuItems, ...bottomMenuItems, "Account & Lists", "Returns & Orders"].map((label) => (
-                        <ListItem component="button" key={label} onClick={toggleMobileMenu} sx={{ textAlign: "left" }}>
+
+                {/* Digital Content & Devices */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Digital Content & Devices
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Prime Video", "Amazon Music", "Kindle E-readers & Books", "Amazon Appstore"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleMobileMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+
+                {/* Shop by Department */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Shop by Department
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Electronics", "Computers", "Smart Home", "Arts & Crafts"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleMobileMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                        <ListItem 
+                            component="button" 
+                            onClick={toggleMobileMenu}
+                            sx={{ 
+                                padding: "12px 16px 12px 32px",
+                                textAlign: "left",
+                                "&:hover": { backgroundColor: "#f0f0f0" }
+                            }}
+                        >
                             <ListItemText
-                                primary={label}
-                                primaryTypographyProps={{ sx: { fontWeight: "500", color: "#036A47", fontSize: "14px" } }}
+                                primary="See all"
+                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
                             />
                         </ListItem>
-                    ))}
-                </List>
+                    </List>
+                </Box>
+
+                {/* Programs & Features */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Programs & Features
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Gift Cards", "Shop By Interest", "Amazon Live", "International Shopping"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleMobileMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                        <ListItem 
+                            component="button" 
+                            onClick={toggleMobileMenu}
+                            sx={{ 
+                                padding: "12px 16px 12px 32px",
+                                textAlign: "left",
+                                "&:hover": { backgroundColor: "#f0f0f0" }
+                            }}
+                        >
+                            <ListItemText
+                                primary="See all"
+                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                            />
+                        </ListItem>
+                    </List>
+                </Box>
+
+                {/* Help & Settings */}
+                <Box>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Help & Settings
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Your Account", "English", "United States", "Customer Service", "Sign In"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleMobileMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+            </Drawer>
+
+            {/* Desktop Drawer Menu */}
+            <Drawer
+                anchor="left"
+                open={desktopMenuOpen}
+                onClose={toggleDesktopMenu}
+                sx={{
+                    "& .MuiDrawer-paper": {
+                        width: "320px",
+                        backgroundColor: "#fff",
+                    },
+                }}
+            >
+                {/* Header Section */}
+                <Box
+                    sx={{
+                        padding: "20px 16px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        backgroundColor: "#232f3e",
+                        color: "white",
+                    }}
+                >
+                    <AccountCircle sx={{ fontSize: "32px" }} />
+                    <Typography sx={{ fontWeight: "bold", fontSize: "18px" }}>Hello, sign in</Typography>
+                </Box>
+
+                {/* Digital Content & Devices */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Digital Content & Devices
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Prime Video", "Amazon Music", "Kindle E-readers & Books", "Amazon Appstore"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleDesktopMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+
+                {/* Shop by Department */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Shop by Department
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Electronics", "Computers", "Smart Home", "Arts & Crafts"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleDesktopMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                        <ListItem 
+                            component="button" 
+                            onClick={toggleDesktopMenu}
+                            sx={{ 
+                                padding: "12px 16px 12px 32px",
+                                textAlign: "left",
+                                "&:hover": { backgroundColor: "#f0f0f0" }
+                            }}
+                        >
+                            <ListItemText
+                                primary="See all"
+                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                            />
+                        </ListItem>
+                    </List>
+                </Box>
+
+                {/* Programs & Features */}
+                <Box sx={{ borderBottom: "1px solid #ddd" }}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Programs & Features
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Gift Cards", "Shop By Interest", "Amazon Live", "International Shopping"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleDesktopMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                        <ListItem 
+                            component="button" 
+                            onClick={toggleDesktopMenu}
+                            sx={{ 
+                                padding: "12px 16px 12px 32px",
+                                textAlign: "left",
+                                "&:hover": { backgroundColor: "#f0f0f0" }
+                            }}
+                        >
+                            <ListItemText
+                                primary="See all"
+                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                            />
+                        </ListItem>
+                    </List>
+                </Box>
+
+                {/* Help & Settings */}
+                <Box>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
+                        Help & Settings
+                    </Typography>
+                    <List sx={{ padding: 0 }}>
+                        {["Your Account", "English", "United States", "Customer Service", "Sign In"].map((item) => (
+                            <ListItem 
+                                component="button" 
+                                key={item} 
+                                onClick={toggleDesktopMenu}
+                                sx={{ 
+                                    padding: "12px 16px 12px 32px",
+                                    textAlign: "left",
+                                    "&:hover": { backgroundColor: "#f0f0f0" }
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
             </Drawer>
         </Box>
     );

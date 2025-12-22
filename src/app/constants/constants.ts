@@ -40,7 +40,7 @@ export const cardData = [
         description: "This is a brief description of the product. It highlights key features or benefits.",
         actionLabel: "Discover more in Home"
     },
-       {
+    {
         id: 5,
         title: "Home essentials",
         subtitle: "Category 4",

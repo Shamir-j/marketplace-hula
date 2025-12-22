@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Paper, Box, IconButton } from '@mui/material';
+import React from 'react';
+import { Paper, Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 interface CarouselItemProps {
@@ -68,98 +68,132 @@ const items = [
 ];
 
 const ExampleCarousel: React.FC = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const isTablet = useMediaQuery(theme.breakpoints.down("md"));
+    
     const scrollRef = React.useRef<HTMLDivElement>(null);
 
     const handleNext = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollLeft += 200;
+            scrollRef.current.scrollLeft += isMobile ? 600 : isTablet ? 800 : 1000;
         }
     };
 
     const handlePrev = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollLeft -= 200;
+            scrollRef.current.scrollLeft -= isMobile ? 600 : isTablet ? 800 : 1000;
         }
     };
 
+    // Responsive heights and sizes
+    const carouselHeight = isMobile ? 200 : isTablet ? 240 : 300;
+    const imageWidth = isMobile ? "140px" : isTablet ? "180px" : "200px";
+    const buttonSize = isMobile ? "small" : "medium";
+    const marginX = isMobile ? "32px" : isTablet ? "40px" : "50px";
+
     return (
         <Box sx={{ position: 'relative', width: '100%' }}>
-            <Paper sx={{ position: 'relative', overflow: 'hidden', height: 250 }}>
-                <Box display="flex" justifyContent="space-between" alignItems="center" padding={2} height="100%">
-                    <IconButton onClick={handlePrev} sx={{ position: 'absolute', left: 8, zIndex: 10 }}>
-                        <ChevronLeft />
+            <Paper 
+                sx={{ 
+                    position: 'relative', 
+                    overflow: 'hidden', 
+                    height: { xs: carouselHeight, sm: carouselHeight + 20 },
+                    backgroundColor: "#fff",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.1)"
+                }}
+            >
+                <Box display="flex" justifyContent="space-between" alignItems="center" height="100%">
+                    {/* Left Arrow */}
+                    <IconButton 
+                        onClick={handlePrev} 
+                        size={buttonSize}
+                        sx={{ 
+                            position: 'absolute', 
+                            left: { xs: "4px", sm: "8px" }, 
+                            zIndex: 10,
+                            backgroundColor: "rgba(255,255,255,0.9)",
+                            transition: "all 0.2s ease",
+                            "&:hover": {
+                                backgroundColor: "rgba(255,255,255,1)",
+                                transform: "scale(1.1)"
+                            }
+                        }}
+                    >
+                        <ChevronLeft sx={{ fontSize: { xs: "20px", sm: "24px" } }} />
                     </IconButton>
 
+                    {/* Scrollable Image Container */}
                     <Box
                         ref={scrollRef}
                         sx={{
                             display: "flex",
                             flexDirection: "row",
-                            gap: 2,
+                            gap: { xs: 1.5, sm: 2 },
                             height: "100%",
                             overflowX: "auto",
                             overflowY: "hidden",
                             scrollBehavior: "smooth",
                             "&::-webkit-scrollbar": {
-                                height: "8px"
+                                height: "6px"
                             },
                             "&::-webkit-scrollbar-track": {
                                 background: "#f1f1f1",
                                 borderRadius: "10px"
                             },
                             "&::-webkit-scrollbar-thumb": {
-                                background: "#888",
+                                background: "#036A47",
                                 borderRadius: "10px",
                                 "&:hover": {
-                                    background: "#555"
+                                    background: "#024936"
                                 }
                             },
                             flex: 1,
-                            margin: '0 50px',
-                            padding: '0 10px'
+                            marginX: marginX,
+                            padding: { xs: "8px 0", sm: "10px 0" }
                         }}
                     >
-                        {items[currentSlide].images.map((image, idx) => (
+                        {items[0].images.map((image, idx) => (
                             <Box
                                 key={idx}
                                 component="img"
                                 src={image}
-                                alt={`${items[currentSlide].name} - Image ${idx + 1}`}
+                                alt={`Product ${idx + 1}`}
                                 sx={{
-                                    minWidth: "150px",
+                                    minWidth: imageWidth,
                                     height: "100%",
-                                    borderRadius: 1,
+                                    borderRadius: "6px",
                                     objectFit: "cover",
-                                    flexShrink: 0
+                                    flexShrink: 0,
+                                    transition: "transform 0.2s ease",
+                                    "&:hover": {
+                                        transform: "scale(1.05)"
+                                    }
                                 }}
                             />
                         ))}
                     </Box>
 
-                    <IconButton onClick={handleNext} sx={{ position: 'absolute', right: 8, zIndex: 10 }}>
-                        <ChevronRight />
+                    {/* Right Arrow */}
+                    <IconButton 
+                        onClick={handleNext} 
+                        size={buttonSize}
+                        sx={{ 
+                            position: 'absolute', 
+                            right: { xs: "4px", sm: "8px" }, 
+                            zIndex: 10,
+                            backgroundColor: "rgba(255,255,255,0.9)",
+                            transition: "all 0.2s ease",
+                            "&:hover": {
+                                backgroundColor: "rgba(255,255,255,1)",
+                                transform: "scale(1.1)"
+                            }
+                        }}
+                    >
+                        <ChevronRight sx={{ fontSize: { xs: "20px", sm: "24px" } }} />
                     </IconButton>
                 </Box>
             </Paper>
-
-            {/* Slide Indicators */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, marginTop: 2 }}>
-                {items.map((_, index) => (
-                    <Box
-                        key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        sx={{
-                            width: currentSlide === index ? 16 : 12,
-                            height: currentSlide === index ? 16 : 12,
-                            borderRadius: '50%',
-                            backgroundColor: currentSlide === index ? '#1976d2' : '#ccc',
-                            cursor: 'pointer',
-                            transition: 'all 0.3s ease'
-                        }}
-                    />
-                ))}
-            </Box>
         </Box>
     );
 };

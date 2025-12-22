@@ -1,5 +1,5 @@
-import BodyContainer from "@/components/BodyContainer";
 import { Metadata } from "next";
+import HomeContent from "@/components/HomeContent";
 
 export const metadata: Metadata = {
   title: "Hula Market - Shop Thousands of Products Online | East Africa",
@@ -14,7 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (
-      <BodyContainer />
-  );
+  return <HomeContent />;
 }

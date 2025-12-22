@@ -64,7 +64,7 @@ const Header = () => {
                                 <LocationOn sx={{ fontSize: "16px" }} />
                                 <Box>
                                     <Typography sx={{ fontSize: "11px", opacity: 0.9 }}>Deliver to Kenya</Typography>
-                                    <Typography sx={{ fontSize: "12px", fontWeight: "bold" }}>Nairobi & KOYONZO</Typography>
+                                    <Typography sx={{ fontSize: "12px", fontWeight: "bold" }}>Nairobi & Westlands</Typography>
                                 </Box>
                             </Box>
                         )}
@@ -275,7 +275,7 @@ const Header = () => {
                 <Box sx={{ backgroundColor: "#036A47", color: "white", padding: "8px 12px", fontSize: "12px" }}>
                     <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: "pointer", "&:hover": { opacity: 0.8 } }}>
                         <LocationOn sx={{ fontSize: "14px" }} />
-                        <Typography sx={{ fontSize: "12px" }}>Deliver to Shamir - Nairobi 6 KOYONZO</Typography>
+                        <Typography sx={{ fontSize: "12px" }}>Deliver to Shamir - Nairobi 11011 -00100 GPO</Typography>
                     </Box>
                 </Box>
             )}

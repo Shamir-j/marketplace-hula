@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Stepper, Step, StepLabel, StepContent } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemText, Stepper, Step, StepLabel, StepContent } from "@mui/material";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -81,7 +81,7 @@ export default function ReturnsAndReplacements() {
                         Easy Process. Fast Resolution. Your Satisfaction Guaranteed.
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        Last Updated: December 19, 2025
+                        Last Updated: December 26, 2025
                     </Typography>
                 </Box>
 

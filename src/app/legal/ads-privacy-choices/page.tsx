@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Switch, FormControlLabel, Button } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemText } from "@mui/material";
 import PrivacyTipIcon from "@mui/icons-material/PrivacyTip";
 import BlockIcon from "@mui/icons-material/Block";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -7,15 +7,15 @@ import InfoIcon from "@mui/icons-material/Info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your Ads Privacy Choices - Hula Market | Ad Preferences",
-  description: "Manage your advertising preferences on Hula Market. Control personalized ads, opt out of ad targeting, and protect your privacy. Learn about our advertising practices.",
-  keywords: "ad privacy, advertising preferences, personalized ads, privacy settings, opt-out",
-  openGraph: {
-    title: "Your Ads Privacy Choices - Hula Market",
-    description: "Control your advertising preferences and manage ad targeting",
-    type: "website",
-    url: "https://hulamarket.co.ke/ads-privacy-choices",
-  },
+    title: "Your Ads Privacy Choices - Pixel Point ERP Platform | Ad Preferences",
+    description: "Manage your advertising preferences across Pixel Point ERP Platform applications. Control personalized ads, opt out of ad targeting, and protect your privacy.",
+    keywords: "ad privacy, advertising preferences, personalized ads, privacy settings, opt-out",
+    openGraph: {
+        title: "Your Ads Privacy Choices - Pixel Point ERP Platform",
+        description: "Control your advertising preferences across all platform applications",
+        type: "website",
+        url: "https://hulamarket.co.ke/legal/ads-privacy",
+    },
 };
 
 export default function YourAdsPrivacyChoices() {
@@ -59,15 +59,41 @@ export default function YourAdsPrivacyChoices() {
                         Control How Your Data is Used for Advertising
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        Last Updated: December 19, 2025
+                        Last Updated: December 26, 2025
                     </Typography>
                 </Box>
 
                 {/* Welcome Card */}
+                {/* Covered Applications */}
+                <Card sx={{ mb: 4, backgroundColor: "#fff3e0", border: "1px solid #ff9800" }}>
+                    <CardContent>
+                        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2, color: "#e65100" }}>
+                            Covered Applications
+                        </Typography>
+                        <Typography sx={{ color: "#e65100", mb: 2 }}>
+                            This policy applies to all applications powered by the Pixel Point ERP Platform, including:
+                        </Typography>
+                        <List>
+                            <ListItem>
+                                <ListItemText primary="• Hula Market (Consumer Marketplace)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Pixel Point POS (Merchant Point-of-Sale Application)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Pixel Point Terminal (Store Checkout Application)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Other current and future Pixel Point-powered applications" />
+                            </ListItem>
+                        </List>
+                    </CardContent>
+                </Card>
+
                 <Card sx={{ mb: 4, backgroundColor: "#e0e7ff", border: "1px solid #3f51b5" }}>
                     <CardContent>
                         <Typography sx={{ color: "#1a237e" }}>
-                            At Hula Market, we believe you should have control over how your data is used for advertising. This page allows you to manage your ad preferences and opt-out of personalized advertising while still being able to use all Hula Market features.
+                            At the Pixel Point ERP Platform, we believe you should have control over how your data is used for advertising. This page allows you to manage your ad preferences and opt-out of personalized advertising while still being able to use all applications powered by our platform.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -123,7 +149,7 @@ export default function YourAdsPrivacyChoices() {
                                 <ListItemText primary="Display relevant product recommendations" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Personalize your shopping experience on Hula Market" />
+                                <ListItemText primary="Personalize your shopping experience on platform applications" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="Show ads on other websites and apps (retargeting)" />
@@ -151,7 +177,7 @@ export default function YourAdsPrivacyChoices() {
                         A. Opt-Out of Personalized Advertising
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        You can choose to opt-out of personalized advertising on Hula Market. This means:
+                        You can choose to opt-out of personalized advertising across all Pixel Point ERP Platform applications. This means:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
@@ -165,10 +191,10 @@ export default function YourAdsPrivacyChoices() {
                                 <ListItemText primary="No retargeting ads on other websites or apps" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="You can still use all Hula Market features and services" />
+                                <ListItemText primary="You can still use all platform application features and services" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="This preference applies only to Hula Market; other sites may still show personalized ads" />
+                                <ListItemText primary="This preference applies to all Pixel Point ERP Platform applications; other sites may still show personalized ads" />
                             </ListItem>
                         </List>
                     </Box>
@@ -218,7 +244,7 @@ export default function YourAdsPrivacyChoices() {
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
                             <ListItem>
-                                <ListItemText primary="1. Sign in to your Hula Market account" />
+                                <ListItemText primary="1. Sign in to your platform application account" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="2. Click 'Account' → 'Privacy & Preferences'" />
@@ -383,7 +409,7 @@ export default function YourAdsPrivacyChoices() {
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1 }}>
                         <List dense>
                             <ListItem>
-                                <ListItemText primary="Your ability to browse, search, or purchase on Hula Market" />
+                                <ListItemText primary="Your ability to browse, search, or use platform applications" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="Your account access or saved information" />
@@ -456,7 +482,7 @@ export default function YourAdsPrivacyChoices() {
                 {/* Footer */}
                 <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #ddd", textAlign: "center" }}>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        © 2025 Hula Market (Continuum Technologies). All rights reserved.
+                        © 2025 Continuum Technologies (Development Lab: Quantum Times Technologies). Pixel Point ERP Platform. All rights reserved.
                     </Typography>
                 </Box>
             </Container>

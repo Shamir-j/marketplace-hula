@@ -150,8 +150,8 @@ const Footer = () => {
             >
                 {/* Top 4 Columns */}
                 <Grid2 container spacing={6} sx={{ mb: 4 }}>
-                    {footerSections.map((section, index) => (
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                    {footerSections.map((section) => (
+                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }} key={section.title}>
                             <Typography
                                 variant="subtitle2"
                                 sx={{
@@ -189,8 +189,8 @@ const Footer = () => {
                 <Divider sx={{ backgroundColor: "#444", my: 4 }} />
                 {/* Bottom Links Grid */}
                 <Grid2 container spacing={3} sx={{ mb: 4 }}>
-                    {bottomSections.map((section, index) => (
-                        <Grid2 size={{ xs: 12, sm: 6, md: 2 }} key={index}>
+                    {bottomSections.map((section) => (
+                        <Grid2 size={{ xs: 12, sm: 6, md: 2 }} key={section.title}>
                             <Typography
                                 variant="body2"
                                 sx={{
@@ -248,7 +248,7 @@ const Footer = () => {
                     >
                         <Button
                             component={Link}
-                            href="/conditions-of-use"
+                            href="/legal/terms-of-service"
                             sx={{
                                 color: "#ccc",
                                 textTransform: "none",
@@ -264,7 +264,7 @@ const Footer = () => {
                         <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
                         <Button
                             component={Link}
-                            href="/privacy-notice"
+                            href="/legal/privacy-notice"
                             sx={{
                                 color: "#ccc",
                                 textTransform: "none",
@@ -280,7 +280,7 @@ const Footer = () => {
                         <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
                         <Button
                             component={Link}
-                            href="/consumer-health-data-privacy"
+                            href="/legal/consumer-health-data"
                             sx={{
                                 color: "#ccc",
                                 textTransform: "none",
@@ -296,7 +296,7 @@ const Footer = () => {
                         <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
                         <Button
                             component={Link}
-                            href="/ads-privacy-choices"
+                            href="/legal/ads-privacy"
                             sx={{
                                 color: "#ccc",
                                 textTransform: "none",
@@ -308,6 +308,54 @@ const Footer = () => {
                             }}
                         >
                             Your Ads Privacy Choices
+                        </Button>
+                        <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
+                        <Button
+                            component={Link}
+                            href="/legal/cookie-policy"
+                            sx={{
+                                color: "#ccc",
+                                textTransform: "none",
+                                fontSize: "0.8rem",
+                                px: 1,
+                                "&:hover": {
+                                    color: "white",
+                                },
+                            }}
+                        >
+                            Cookie Policy
+                        </Button>
+                        <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
+                        <Button
+                            component={Link}
+                            href="/legal/acceptable-use"
+                            sx={{
+                                color: "#ccc",
+                                textTransform: "none",
+                                fontSize: "0.8rem",
+                                px: 1,
+                                "&:hover": {
+                                    color: "white",
+                                },
+                            }}
+                        >
+                            Acceptable Use
+                        </Button>
+                        <Typography sx={{ color: "#666", px: 0.5 }}>|</Typography>
+                        <Button
+                            component={Link}
+                            href="/legal/seller-agreement"
+                            sx={{
+                                color: "#ccc",
+                                textTransform: "none",
+                                fontSize: "0.8rem",
+                                px: 1,
+                                "&:hover": {
+                                    color: "white",
+                                },
+                            }}
+                        >
+                            Seller Agreement
                         </Button>
                     </Box>
 

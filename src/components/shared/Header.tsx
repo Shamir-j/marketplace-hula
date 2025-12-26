@@ -78,7 +78,7 @@ const Header = () => {
                             sx={{
                                 backgroundColor: "white",
                                 borderRadius: "4px",
-                                width: "70%",
+                                width: { xs: "100%", sm: "500px", md: "600px", lg: "700px" },
                                 overflow: "hidden",
                             }}
                         >
@@ -91,8 +91,7 @@ const Header = () => {
                                     paddingX: 1,
                                     backgroundColor: "#f3f3f3",
                                     border: "none",
-                                    borderRight: "1px solid #ddd",
-                                    "& .MuiOutlinedInput-notchedOutline": { border: "none" },
+                                    borderRight: "1px solid #ddd", "& .MuiOutlinedInput-notchedOutline": { border: "none" },
                                     fontSize: "13px",
                                 }}
                                 size="small"
@@ -155,7 +154,14 @@ const Header = () => {
                         )}
 
                         {/* Account Button */}
-                        {!isMobile ? (
+                        {isMobile ? (
+                            <Box display="flex" alignItems="center" gap="4px">
+                                <Typography sx={{ fontSize: "12px" }}>Sign in</Typography>
+                                <IconButton color="inherit" sx={{ color: "white", padding: "4px" }}>
+                                    <AccountCircle sx={{ fontSize: "24px" }} />
+                                </IconButton>
+                            </Box>
+                        ) : (
                             <Button
                                 color="inherit"
                                 sx={{
@@ -171,13 +177,6 @@ const Header = () => {
                                 <Typography sx={{ fontSize: "11px", opacity: 0.9 }}>Hello, Sign in</Typography>
                                 <Typography sx={{ fontSize: "13px", fontWeight: "bold" }}>Account & Lists</Typography>
                             </Button>
-                        ) : (
-                            <Box display="flex" alignItems="center" gap="4px">
-                                <Typography sx={{ fontSize: "12px" }}>Sign in</Typography>
-                                <IconButton color="inherit" sx={{ color: "white", padding: "4px" }}>
-                                    <AccountCircle sx={{ fontSize: "24px" }} />
-                                </IconButton>
-                            </Box>
                         )}
 
                         {/* Orders Button - Desktop Only */}
@@ -281,7 +280,30 @@ const Header = () => {
             )}
 
             {/* Navigation Menu */}
-            {!isMobile ? (
+            {isMobile ? (
+                // Mobile: Horizontal scrolling menu items below deliver location
+                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "0px", overflowX: "auto", scrollBehavior: "smooth" }}>
+                    <Box display="flex" gap={0} sx={{ minWidth: "fit-content" }}>
+                        {topMenuItems.map((label) => (
+                            <Button
+                                key={label}
+                                color="inherit"
+                                sx={{
+                                    textTransform: "none",
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    padding: "8px 12px",
+                                    whiteSpace: "nowrap",
+                                    borderRadius: "0px",
+                                    "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" },
+                                }}
+                            >
+                                {label}
+                            </Button>
+                        ))}
+                    </Box>
+                </Box>
+            ) : (
                 // Desktop: Dark green navigation bar with "All" button
                 <Box sx={{ backgroundColor: "#085749", color: "white", padding: "8px 16px" }}>
                     <Box display="flex" alignItems="center" gap={2}>
@@ -311,29 +333,6 @@ const Header = () => {
                                     fontWeight: "500",
                                     padding: "4px 8px",
                                     "&:hover": { backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "4px" },
-                                }}
-                            >
-                                {label}
-                            </Button>
-                        ))}
-                    </Box>
-                </Box>
-            ) : (
-                // Mobile: Horizontal scrolling menu items below deliver location
-                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "0px", overflowX: "auto", scrollBehavior: "smooth" }}>
-                    <Box display="flex" gap={0} sx={{ minWidth: "fit-content" }}>
-                        {topMenuItems.map((label) => (
-                            <Button
-                                key={label}
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "12px",
-                                    fontWeight: "500",
-                                    padding: "8px 12px",
-                                    whiteSpace: "nowrap",
-                                    borderRadius: "0px",
-                                    "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" },
                                 }}
                             >
                                 {label}
@@ -401,7 +400,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -428,7 +427,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -442,7 +441,7 @@ const Header = () => {
                         >
                             <ListItemText
                                 primary="See all"
-                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
                             />
                         </ListItem>
                     </List>
@@ -468,7 +467,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -482,7 +481,7 @@ const Header = () => {
                         >
                             <ListItemText
                                 primary="See all"
-                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
                             />
                         </ListItem>
                     </List>
@@ -505,7 +504,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                             </ListItem>
                         ))}
@@ -571,7 +570,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -599,7 +598,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -613,7 +612,7 @@ const Header = () => {
                         >
                             <ListItemText
                                 primary="See all"
-                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
                             />
                         </ListItem>
                     </List>
@@ -639,7 +638,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                                 <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
                             </ListItem>
@@ -653,7 +652,7 @@ const Header = () => {
                         >
                             <ListItemText
                                 primary="See all"
-                                primaryTypographyProps={{ sx: { fontSize: "14px", color: "#007185" } }}
+                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
                             />
                         </ListItem>
                     </List>
@@ -676,7 +675,7 @@ const Header = () => {
                             >
                                 <ListItemText
                                     primary={item}
-                                    primaryTypographyProps={{ sx: { fontSize: "14px", color: "#0F1111" } }}
+                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
                                 />
                             </ListItem>
                         ))}

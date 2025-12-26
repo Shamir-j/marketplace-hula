@@ -43,7 +43,7 @@ const AdvertisingCarousel: React.FC = () => {
         <Box
             sx={{
                 position: "relative",
-                width: "60%",
+                width: { xs: "100%", sm: "90%", md: "80%", lg: "100%",},
                 height: { xs: "200px", sm: "250px", md: "350px", lg: "400px" },
                 borderRadius: "8px",
                 overflow: "hidden",
@@ -162,9 +162,9 @@ const AdvertisingCarousel: React.FC = () => {
                     zIndex: 3
                 }}
             >
-                {advertisements.map((_, idx) => (
+                {advertisements.map((ad, idx) => (
                     <Box
-                        key={idx}
+                        key={ad.id}
                         onClick={() => setCurrentSlide(idx)}
                         sx={{
                             width: "12px",

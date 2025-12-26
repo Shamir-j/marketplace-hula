@@ -1,21 +1,20 @@
-import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Alert } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemText, Alert } from "@mui/material";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
-import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import LockIcon from "@mui/icons-material/Lock";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import InfoIcon from "@mui/icons-material/Info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consumer Health Data Privacy - Hula Market | Health Data Protection",
-  description: "Hula Market's comprehensive consumer health data privacy disclosure. We protect your health data with enterprise-grade security. CHPA compliant. Your health information is confidential.",
-  keywords: "health data privacy, health information protection, CHPA, consumer health data, privacy protection",
-  openGraph: {
-    title: "Consumer Health Data Privacy - Hula Market",
-    description: "Your health data is protected with enterprise-grade security",
-    type: "website",
-    url: "https://hulamarket.co.ke/consumer-health-data-privacy",
-  },
+    title: "Consumer Health Data Privacy - Pixel Point ERP Platform | Health Data Protection",
+    description: "The Pixel Point ERP Platform's comprehensive consumer health data privacy disclosure. We protect your health data with enterprise-grade security. CHPA compliant.",
+    keywords: "health data privacy, health information protection, CHPA, consumer health data, privacy protection",
+    openGraph: {
+        title: "Consumer Health Data Privacy - Pixel Point ERP Platform",
+        description: "Your health data is protected with enterprise-grade security across all platform applications",
+        type: "website",
+        url: "https://hulamarket.co.ke/legal/consumer-health-data",
+    },
 };
 
 export default function ConsumerHealthDataPrivacy() {
@@ -64,16 +63,42 @@ export default function ConsumerHealthDataPrivacy() {
                 </Box>
 
                 {/* Warning Alert */}
+                {/* Covered Applications */}
+                <Card sx={{ mb: 4, backgroundColor: "#f3e5f5", border: "1px solid #9c27b0" }}>
+                    <CardContent>
+                        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2, color: "#6a1b9a" }}>
+                            Covered Applications
+                        </Typography>
+                        <Typography sx={{ color: "#6a1b9a", mb: 2 }}>
+                            This policy applies to all applications powered by the Pixel Point ERP Platform, including:
+                        </Typography>
+                        <List>
+                            <ListItem>
+                                <ListItemText primary="• Hula Market (Consumer Marketplace)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Pixel Point POS (Merchant Point-of-Sale Application)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Pixel Point Terminal (Store Checkout Application)" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="• Other current and future Pixel Point-powered applications" />
+                            </ListItem>
+                        </List>
+                    </CardContent>
+                </Card>
+
                 <Alert severity="warning" sx={{ mb: 4 }}>
                     <Typography sx={{ fontWeight: "bold" }}>Important Disclosure:</Typography>
-                    This policy covers health-related data collected through Hula Market health and wellness products, services, and features. If you do not use health-related features, this disclosure may not fully apply to you.
+                    This policy covers health-related data collected through applications powered by the Pixel Point ERP Platform, including health and wellness products, services, and features. If you do not use health-related features, this disclosure may not fully apply to you.
                 </Alert>
 
                 {/* Welcome Card */}
                 <Card sx={{ mb: 4, backgroundColor: "#e8f5e9", border: "1px solid #4caf50" }}>
                     <CardContent>
                         <Typography sx={{ color: "#2e7d32" }}>
-                            Hula Market is committed to safeguarding your health and wellness data with the highest standards of privacy and security. Health information is sensitive and requires special legal protections. This disclosure explains how we handle consumer health data under applicable state and federal laws.
+                            The Pixel Point ERP Platform is committed to safeguarding your health and wellness data with the highest standards of privacy and security. Health information is sensitive and requires special legal protections. This disclosure explains how we handle consumer health data across all platform applications under applicable state and federal laws.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -86,7 +111,7 @@ export default function ConsumerHealthDataPrivacy() {
                     </Typography>
 
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Consumer health data includes any information about your health, health conditions, treatments, medical devices, health insurance, or wellness activities collected through Hula Market services:
+                        Consumer health data includes any information about your health, health conditions, treatments, medical devices, health insurance, or wellness activities collected through Pixel Point ERP Platform applications:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
@@ -182,7 +207,7 @@ export default function ConsumerHealthDataPrivacy() {
                     </Typography>
 
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Hula Market has strict limitations on sharing consumer health data:
+                        The platform has strict limitations on sharing consumer health data:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
@@ -378,7 +403,7 @@ export default function ConsumerHealthDataPrivacy() {
                     </Typography>
 
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Hula Market does not knowingly collect health data from children under 13. For children ages 13-17, we:
+                        The platform does not knowingly collect health data from children under 13. For children ages 13-17, we:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1 }}>
                         <List dense>
@@ -468,7 +493,7 @@ export default function ConsumerHealthDataPrivacy() {
                 {/* Footer */}
                 <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #ddd", textAlign: "center" }}>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        © 2025 Hula Market (Continuum Technologies). All rights reserved.
+                        © 2025 Continuum Technologies (Development Lab: Quantum Times Technologies). Pixel Point ERP Platform. All rights reserved.
                     </Typography>
                 </Box>
             </Container>

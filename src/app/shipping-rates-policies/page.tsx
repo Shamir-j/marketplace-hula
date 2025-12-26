@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemText, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -58,7 +58,7 @@ export default function ShippingRatesPolicies() {
                         Fast, Reliable, and Transparent Shipping
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        Last Updated: December 19, 2025
+                        Last Updated: December 26, 2025
                     </Typography>
                 </Box>
 

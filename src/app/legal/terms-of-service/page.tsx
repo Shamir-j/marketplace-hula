@@ -1,19 +1,19 @@
-import { Box, Typography, Container, Divider, Chip, Card, CardContent, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import GavelIcon from "@mui/icons-material/Gavel";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Conditions of Use - Hula Market | Terms & Conditions",
-  description: "Review Hula Market's Conditions of Use. Understand your rights and responsibilities as a buyer or seller. Our complete terms and conditions for using our platform.",
-  keywords: "terms and conditions, conditions of use, user agreement, terms of service",
-  openGraph: {
-    title: "Conditions of Use - Hula Market",
-    description: "Read Hula Market's terms and conditions for buyers and sellers",
-    type: "website",
-    url: "https://hulamarket.co.ke/conditions-of-use",
-  },
+    title: "Conditions of Use - Pixel Point ERP Platform | Terms & Conditions",
+    description: "Review the Pixel Point ERP Platform's Conditions of Use. Understand your rights and responsibilities when using applications powered by our platform.",
+    keywords: "terms and conditions, conditions of use, user agreement, terms of service",
+    openGraph: {
+        title: "Conditions of Use - Pixel Point ERP Platform",
+        description: "Read the Pixel Point ERP Platform's terms and conditions for all applications",
+        type: "website",
+        url: "https://hulamarket.co.ke/legal/terms-of-service",
+    },
 };
 
 export default function ConditionsOfUse() {
@@ -57,7 +57,7 @@ export default function ConditionsOfUse() {
                         Effective Date: December 19, 2025
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        Last Updated: December 19, 2025
+                        Last Updated: December 26, 2025
                     </Typography>
                 </Box>
 
@@ -65,8 +65,58 @@ export default function ConditionsOfUse() {
                 <Card sx={{ mb: 4, backgroundColor: "#e8f5e9", border: "1px solid #81c784" }}>
                     <CardContent>
                         <Typography sx={{ color: "#1b5e20" }}>
-                            Welcome to Hula Market - Your Complete E-Commerce and Business Management Solution. These Terms and Conditions govern your access to and use of Hula Market, including our marketplace, mobile applications, website, and related services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, please do not use our Service.
+                            Welcome to the Pixel Point ERP Platform - Your Complete E-Commerce and Business Management Solution. These Terms and Conditions govern your access to and use of all applications powered by the Pixel Point ERP Platform, including marketplace apps, mobile applications, point-of-sale systems, terminals, and related services (collectively, the "Service"). By accessing or using any application powered by our platform, you agree to be bound by these Terms. If you do not agree, please do not use our Service.
                         </Typography>
+                    </CardContent>
+                </Card>
+
+                {/* Covered Applications */}
+                <Card sx={{ mb: 4, backgroundColor: "#e3f2fd", border: "1px solid #2196f3" }}>
+                    <CardContent>
+                        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2, color: "#1565c0" }}>
+                            Covered Applications
+                        </Typography>
+                        <Typography sx={{ color: "#1565c0", mb: 2 }}>
+                            This policy applies to all applications powered by the Pixel Point ERP Platform, including:
+                        </Typography>
+                        <List>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="Hula Market (Consumer Marketplace)"
+                                    secondary="E-commerce marketplace for buyers and sellers"
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="Pixel Point POS (Merchant Point-of-Sale Application)"
+                                    secondary="Point-of-sale system for retail and service businesses"
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="Pixel Point Terminal (Store Checkout Application)"
+                                    secondary="Self-service and assisted checkout terminals"
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="Other current and future Pixel Point-powered applications"
+                                    secondary="Agent apps, desktop applications, and integrations"
+                                />
+                            </ListItem>
+                        </List>
                     </CardContent>
                 </Card>
 
@@ -77,14 +127,14 @@ export default function ConditionsOfUse() {
                         1. Service Overview
                     </Typography>
                     <Typography sx={{ mb: 1.5, color: "#555", lineHeight: 1.7 }}>
-                        Hula Market operates as a comprehensive e-commerce marketplace and business management platform owned and operated by Continuum Technologies. We provide:
+                        The Pixel Point ERP Platform operates as a comprehensive e-commerce marketplace and business management platform owned and operated by Continuum Technologies. We provide:
                     </Typography>
                     <List sx={{ backgroundColor: "#fff", borderRadius: 1, p: 2 }}>
                         <ListItem>
                             <ListItemIcon>
                                 <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
-                            <ListItemText 
+                            <ListItemText
                                 primary="Marketplace Platform"
                                 secondary="A multi-vendor e-commerce ecosystem where buyers discover and purchase products"
                             />
@@ -93,7 +143,7 @@ export default function ConditionsOfUse() {
                             <ListItemIcon>
                                 <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
-                            <ListItemText 
+                            <ListItemText
                                 primary="Seller Management Tools"
                                 secondary="Inventory management, order fulfillment, analytics, and seller dashboard"
                             />
@@ -102,7 +152,7 @@ export default function ConditionsOfUse() {
                             <ListItemIcon>
                                 <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
-                            <ListItemText 
+                            <ListItemText
                                 primary="Payment Processing"
                                 secondary="Secure payment handling for multiple payment methods and currencies"
                             />
@@ -111,7 +161,7 @@ export default function ConditionsOfUse() {
                             <ListItemIcon>
                                 <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
-                            <ListItemText 
+                            <ListItemText
                                 primary="Fulfillment Services"
                                 secondary="Optional Fulfillment by Hula Market (FHM) for logistics and delivery"
                             />
@@ -127,7 +177,7 @@ export default function ConditionsOfUse() {
                         2. User Eligibility and Accounts
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        To use Hula Market, you must:
+                        To use applications powered by the platform, you must:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 2 }}>
                         <List dense>
@@ -169,28 +219,28 @@ export default function ConditionsOfUse() {
                         Purchase Agreement
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Your purchase on Hula Market constitutes an offer to buy products on the terms presented. Sellers have the right to accept or decline your purchase offer. Once a seller confirms your order, a binding contract is formed between you and the seller.
+                        Your purchase through platform applications constitutes an offer to buy products on the terms presented. Sellers have the right to accept or decline your purchase offer. Once a seller confirms your order, a binding contract is formed between you and the seller.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         Product Descriptions and Prices
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        While we strive to provide accurate product descriptions and pricing, Hula Market does not guarantee that all product descriptions, pricing, or availability information is accurate, complete, or error-free. Prices are subject to change without notice. Sellers are responsible for ensuring the accuracy of their product listings.
+                        While we strive to provide accurate product descriptions and pricing, the platform does not guarantee that all product descriptions, pricing, or availability information is accurate, complete, or error-free. Prices are subject to change without notice. Sellers are responsible for ensuring the accuracy of their product listings.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         Returns and Refunds
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Returns and refund policies are determined by individual sellers. Each product listing will display the seller's specific return policy. For disputes, buyers may open a case within 30 days of delivery. Hula Market provides dispute resolution services and may facilitate refunds if the seller is unresponsive.
+                        Returns and refund policies are determined by individual sellers. Each product listing will display the seller's specific return policy. For disputes, buyers may open a case within 30 days of delivery. The platform provides dispute resolution services and may facilitate refunds if the seller is unresponsive.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         Payment Methods
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Hula Market supports multiple payment methods including credit cards, debit cards, mobile money, bank transfers, and digital wallets. All payments are processed securely with PCI-DSS compliance. You agree to provide valid payment information and authorize Hula Market to charge your chosen payment method.
+                        The platform supports multiple payment methods including credit cards, debit cards, mobile money, bank transfers, and digital wallets. All payments are processed securely with PCI-DSS compliance. You agree to provide valid payment information and authorize the platform to charge your chosen payment method.
                     </Typography>
                 </Box>
 
@@ -206,7 +256,7 @@ export default function ConditionsOfUse() {
                         Seller Registration
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        To become a seller on Hula Market, you must:
+                        To become a seller using platform applications, you must:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 2 }}>
                         <List dense>
@@ -232,14 +282,14 @@ export default function ConditionsOfUse() {
                         Product Compliance
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        All products listed on Hula Market must be legal, authentic, and comply with local and international laws. Sellers warrant that they have the right to sell all products and that products do not infringe any third-party intellectual property rights.
+                        All products listed on platform applications must be legal, authentic, and comply with local and international laws. Sellers warrant that they have the right to sell all products and that products do not infringe any third-party intellectual property rights.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         Prohibited Items
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        The following items are strictly prohibited on Hula Market:
+                        The following items are strictly prohibited on platform applications:
                     </Typography>
                     <Box sx={{ backgroundColor: "#ffe0e0", p: 2, borderRadius: 1, mb: 2 }}>
                         <List dense>
@@ -297,12 +347,12 @@ export default function ConditionsOfUse() {
                         5. Prohibited Conduct
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        You agree not to use Hula Market for any unlawful purpose or in any way that violates these Terms. Specifically, you shall not:
+                        You agree not to use platform applications for any unlawful purpose or in any way that violates these Terms. Specifically, you shall not:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1 }}>
                         <List dense>
                             <ListItem>
-                                <ListItemText primary="• Attempt to unauthorized access to Hula Market systems or user accounts" />
+                                <ListItemText primary="• Attempt to unauthorized access to platform systems or user accounts" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="• Engage in fraudulent transactions, chargebacks, or payment manipulation" />
@@ -314,7 +364,7 @@ export default function ConditionsOfUse() {
                                 <ListItemText primary="• Engage in harassment, abuse, or threats toward other users" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="• Interfere with or disrupt Hula Market's operations" />
+                                <ListItemText primary="• Interfere with or disrupt platform operations" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="• Violate any applicable local, state, national, or international laws" />
@@ -334,13 +384,13 @@ export default function ConditionsOfUse() {
                         6. Intellectual Property Rights
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        All content on Hula Market, including but not limited to text, graphics, logos, images, audio, and video, is the property of Hula Market or its content suppliers and is protected by international copyright laws.
+                        All content on platform applications, including but not limited to text, graphics, logos, images, audio, and video, is the property of the Pixel Point ERP Platform or its content suppliers and is protected by international copyright laws.
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        By uploading content to Hula Market (product photos, descriptions, reviews), you grant Hula Market a royalty-free, worldwide, non-exclusive license to use, reproduce, modify, and display such content in connection with the Service.
+                        By uploading content to platform applications (product photos, descriptions, reviews), you grant the Pixel Point ERP Platform a royalty-free, worldwide, non-exclusive license to use, reproduce, modify, and display such content in connection with the Service.
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        If you believe your intellectual property rights have been violated on Hula Market, please contact our legal team with detailed information and we will investigate promptly.
+                        If you believe your intellectual property rights have been violated on platform applications, please contact our legal team with detailed information and we will investigate promptly.
                     </Typography>
                 </Box>
 
@@ -353,10 +403,10 @@ export default function ConditionsOfUse() {
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff3cd", p: 2, borderRadius: 1, border: "1px solid #ffc107" }}>
                         <Typography sx={{ mb: 2, color: "#856404", lineHeight: 1.7 }}>
-                            TO THE FULLEST EXTENT PERMITTED BY LAW, HULA MARKET SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, EVEN IF HULA MARKET HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                            TO THE FULLEST EXTENT PERMITTED BY LAW, THE PIXEL POINT ERP PLATFORM SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, EVEN IF THE PLATFORM HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
                         </Typography>
                         <Typography sx={{ color: "#856404", lineHeight: 1.7 }}>
-                            Hula Market's total liability for any claim shall not exceed the amount you paid to Hula Market in the past 12 months.
+                            The platform's total liability for any claim shall not exceed the amount you paid to the platform in the past 12 months.
                         </Typography>
                     </Box>
                 </Box>
@@ -372,14 +422,14 @@ export default function ConditionsOfUse() {
                         Buyer-Seller Disputes
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Hula Market provides a structured dispute resolution process. For purchase disputes, buyers can file a claim within 30 days of delivery. Hula Market will review evidence from both parties and make a determination.
+                        The platform provides a structured dispute resolution process. For purchase disputes, buyers can file a claim within 30 days of delivery. The platform will review evidence from both parties and make a determination.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         Arbitration
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Any dispute not resolved through our dispute resolution process shall be resolved through binding arbitration rather than in court, under the rules of a mutually agreed-upon arbitration body. You and Hula Market agree to this arbitration clause.
+                        Any dispute not resolved through our dispute resolution process shall be resolved through binding arbitration rather than in court, under the rules of a mutually agreed-upon arbitration body. You and the Pixel Point ERP Platform agree to this arbitration clause.
                     </Typography>
                 </Box>
 
@@ -391,7 +441,7 @@ export default function ConditionsOfUse() {
                         9. Termination and Suspension
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Hula Market may suspend or terminate your account if you:
+                        The platform may suspend or terminate your account if you:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1 }}>
                         <List dense>
@@ -425,7 +475,7 @@ export default function ConditionsOfUse() {
                         10. Changes to These Terms
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Hula Market reserves the right to modify these Terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of Hula Market following the posting of revised Terms means you accept and agree to the changes. We recommend you regularly review these Terms to stay informed.
+                        The Pixel Point ERP Platform reserves the right to modify these Terms at any time. Changes will be effective immediately upon posting to the website. Your continued use of platform applications following the posting of revised Terms means you accept and agree to the changes. We recommend you regularly review these Terms to stay informed.
                     </Typography>
                 </Box>
 
@@ -452,7 +502,7 @@ export default function ConditionsOfUse() {
                         A. Return Eligibility
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Most items purchased through Hula Market are eligible for return or refund within 30 days of purchase, subject to the following conditions:
+                        Most items purchased through platform applications are eligible for return or refund within 30 days of purchase, subject to the following conditions:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
@@ -532,7 +582,7 @@ export default function ConditionsOfUse() {
                         B. Disclaimer of Implied Warranties
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Hula Market provides the Service on an "AS IS" and "AS AVAILABLE" basis. We disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement, to the extent permitted by law.
+                        The platform provides the Service on an "AS IS" and "AS AVAILABLE" basis. We disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement, to the extent permitted by law.
                     </Typography>
                 </Box>
 
@@ -547,14 +597,14 @@ export default function ConditionsOfUse() {
                         A. Hula Market Content
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        All content on Hula Market (including logos, designs, text, graphics, and software) is the exclusive property of Hula Market or our content providers and is protected by copyright, trademark, and other intellectual property laws.
+                        All content on platform applications (including logos, designs, text, graphics, and software) is the exclusive property of the Pixel Point ERP Platform or our content providers and is protected by copyright, trademark, and other intellectual property laws.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
                         B. User-Generated Content
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        By uploading product photos, descriptions, reviews, or other content, you grant Hula Market a non-exclusive, royalty-free license to use, reproduce, modify, and display your content on the platform and in our marketing materials.
+                        By uploading product photos, descriptions, reviews, or other content, you grant the Pixel Point ERP Platform a non-exclusive, royalty-free license to use, reproduce, modify, and display your content on the platform and in our marketing materials.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
@@ -691,7 +741,7 @@ export default function ConditionsOfUse() {
                 {/* Footer */}
                 <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #ddd", textAlign: "center" }}>
                     <Typography variant="body2" sx={{ color: "#999" }}>
-                        © 2025 Hula Market (Continuum Technologies). All rights reserved.
+                        © 2025 Continuum Technologies (Development Lab: Quantum Times Technologies). Pixel Point ERP Platform. All rights reserved.
                     </Typography>
                 </Box>
             </Container>

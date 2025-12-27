@@ -17,46 +17,18 @@ export const metadata: Metadata = {
 };
 
 export default function CookiePolicy() {
-    const sectionStyle = {
-        mb: 4,
-    };
-
-    const headingStyle = {
-        fontWeight: "bold",
-        mb: 2,
-        color: "#232f3e",
-        display: "flex",
-        alignItems: "center",
-        gap: 1,
-    };
-
-    const subsectionHeading = {
-        fontWeight: "600",
-        mb: 1.5,
-        color: "#37475a",
-        fontSize: "1rem",
-    };
-
     return (
-        <Box sx={{ backgroundColor: "#f5f5f5", minHeight: "100vh", py: 4 }}>
+        <Box sx={{ minHeight: "100vh", backgroundColor: "#f5f5f5", py: 4 }}>
             <Container maxWidth="md">
                 {/* Header */}
                 <Box sx={{ mb: 4, textAlign: "center" }}>
-                    <Typography
-                        variant="h3"
-                        sx={{
-                            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-                            fontWeight: "bold",
-                            mb: 2,
-                            color: "#232f3e",
-                        }}
-                    >
+                    <Typography variant="h3">
                         Cookie Policy
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#666", mb: 1 }}>
+                    <Typography variant="body1" sx={{ color: "text.disabled", mb: 1 }}>
                         Effective Date: December 27, 2025
                     </Typography>
-                    <Typography variant="body2" sx={{ color: "#999" }}>
+                    <Typography variant="body2" sx={{ color: "text.disabled" }}>
                         Last Updated: December 27, 2025
                     </Typography>
                 </Box>
@@ -64,10 +36,10 @@ export default function CookiePolicy() {
                 {/* Covered Applications */}
                 <Card sx={{ mb: 4, backgroundColor: "#fff3e0", border: "1px solid #ff9800" }}>
                     <CardContent>
-                        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2, color: "#e65100" }}>
+                        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2, color: "warning.dark" }}>
                             Covered Applications
                         </Typography>
-                        <Typography sx={{ color: "#e65100", mb: 2 }}>
+                        <Typography sx={{ color: "warning.dark", mb: 2 }}>
                             This policy applies to all applications powered by the Pixel Point ERP Platform, including:
                         </Typography>
                         <List>
@@ -90,27 +62,27 @@ export default function CookiePolicy() {
                 {/* Introduction */}
                 <Card sx={{ mb: 4, backgroundColor: "#e3f2fd", border: "1px solid #2196f3" }}>
                     <CardContent>
-                        <Typography sx={{ color: "#1565c0" }}>
+                        <Typography sx={{ color: "info.dark" }}>
                             The Pixel Point ERP Platform uses cookies and similar tracking technologies to provide, protect, and improve our services. This Cookie Policy explains what cookies are, how we use them, and how you can control them. By using our platform applications, you consent to our use of cookies as described in this policy.
                         </Typography>
                     </CardContent>
                 </Card>
 
                 {/* 1. What Are Cookies */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
-                        <CookieIcon sx={{ color: "#ff9800" }} />
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
+                        <CookieIcon sx={{ color: "warning.main" }} />
                         1. What Are Cookies?
                     </Typography>
 
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         Cookies are small text files that are placed on your device (computer, smartphone, tablet) when you visit our platform applications. They help us recognize your device and store information about your preferences or past actions.
                     </Typography>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         Types of Technologies We Use
                     </Typography>
-                    <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1 }}>
+                    <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
                         <List dense>
                             <ListItem>
                                 <ListItemText 
@@ -149,16 +121,16 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 2. Cookie Categories */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
-                        <InfoIcon sx={{ color: "#2196f3" }} />
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
+                        <InfoIcon sx={{ color: "info.main" }} />
                         2. Categories of Cookies We Use
                     </Typography>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         A. Strictly Necessary Cookies (Required)
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         These cookies are essential for platform applications to function. You cannot opt out of these cookies.
                     </Typography>
                     <TableContainer component={Paper} sx={{ mb: 3 }}>
@@ -200,10 +172,10 @@ export default function CookiePolicy() {
                         </Table>
                     </TableContainer>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         B. Performance & Analytics Cookies (Optional)
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         These cookies help us understand how visitors use our platform applications.
                     </Typography>
                     <TableContainer component={Paper} sx={{ mb: 3 }}>
@@ -240,10 +212,10 @@ export default function CookiePolicy() {
                         </Table>
                     </TableContainer>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         C. Functional Cookies (Optional)
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         These cookies enable enhanced functionality and personalization.
                     </Typography>
                     <TableContainer component={Paper} sx={{ mb: 3 }}>
@@ -280,10 +252,10 @@ export default function CookiePolicy() {
                         </Table>
                     </TableContainer>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         D. Advertising & Marketing Cookies (Optional)
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         These cookies are used to deliver personalized advertisements.
                     </Typography>
                     <TableContainer component={Paper} sx={{ mb: 3 }}>
@@ -324,12 +296,12 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 3. Third-Party Cookies */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
                         3. Third-Party Cookies
                     </Typography>
 
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         We work with trusted third-party service providers who may also set cookies on your device:
                     </Typography>
 
@@ -415,16 +387,16 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 4. How to Control Cookies */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
-                        <SettingsIcon sx={{ color: "#4caf50" }} />
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
+                        <SettingsIcon sx={{ color: "success.main" }} />
                         4. How to Control and Manage Cookies
                     </Typography>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         A. Cookie Consent Banner
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         When you first visit our platform applications, you'll see a cookie consent banner allowing you to:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
@@ -441,10 +413,10 @@ export default function CookiePolicy() {
                         </List>
                     </Box>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         B. Browser Settings
                     </Typography>
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         Most browsers allow you to control cookies through settings:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
@@ -476,7 +448,7 @@ export default function CookiePolicy() {
                         </List>
                     </Box>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         C. Mobile Device Controls
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff", p: 2, borderRadius: 1, mb: 3 }}>
@@ -496,10 +468,10 @@ export default function CookiePolicy() {
                         </List>
                     </Box>
 
-                    <Typography variant="subtitle2" sx={subsectionHeading}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 2, mb: 1 }}>
                         D. Do Not Track (DNT)
                     </Typography>
-                    <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
                         We respect Do Not Track signals. When DNT is enabled in your browser, we will not set non-essential cookies or tracking technologies.
                     </Typography>
                 </Box>
@@ -507,12 +479,12 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 5. Impact of Disabling Cookies */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
                         5. Impact of Disabling Cookies
                     </Typography>
 
-                    <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ mb: 2, color: "text.secondary", lineHeight: 1.7 }}>
                         If you disable or reject cookies, some features may not work properly:
                     </Typography>
                     <Box sx={{ backgroundColor: "#fff3cd", p: 2, borderRadius: 1, border: "1px solid #ffc107" }}>
@@ -542,12 +514,12 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 6. Updates to This Policy */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
                         6. Changes to This Cookie Policy
                     </Typography>
 
-                    <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
+                    <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
                         We may update this Cookie Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. We will notify you of significant changes by posting a notice on our platform or sending you an email. The "Last Updated" date at the top of this policy indicates when it was last revised.
                     </Typography>
                 </Box>
@@ -555,12 +527,12 @@ export default function CookiePolicy() {
                 <Divider sx={{ my: 3 }} />
 
                 {/* 7. Contact Us */}
-                <Box sx={sectionStyle}>
-                    <Typography variant="h5" sx={headingStyle}>
+                <Box sx={{ mb: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
                         7. Questions About Cookies?
                     </Typography>
 
-                    <Card sx={{ backgroundColor: "#f9f9f9" }}>
+                    <Card sx={{ backgroundColor: "grey.50" }}>
                         <CardContent>
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 For questions about our use of cookies:
@@ -573,8 +545,8 @@ export default function CookiePolicy() {
                 </Box>
 
                 {/* Footer */}
-                <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #ddd", textAlign: "center" }}>
-                    <Typography variant="body2" sx={{ color: "#999" }}>
+                <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid", borderColor: "grey.300", textAlign: "center" }}>
+                    <Typography variant="body2" sx={{ color: "text.disabled" }}>
                         © 2025 Continuum Technologies (Development Lab: Quantum Times Technologies). Pixel Point ERP Platform. All rights reserved.
                     </Typography>
                 </Box>

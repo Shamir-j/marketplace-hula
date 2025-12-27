@@ -1,9 +1,42 @@
 "use client";
-import React from "react";
-import ProductCard from "@/components/ProductCard";
-import { Box, Divider, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { 
+    Box, 
+    Typography, 
+    Checkbox, 
+    FormControlLabel, 
+    FormGroup, 
+    Rating, 
+    Divider,
+    Button,
+    Chip,
+    Link,
+    Select,
+    MenuItem,
+    FormControl,
+    Card,
+    CardMedia,
+    CardContent
+} from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const ResultsPage = () => {
+    const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
+        brands: true,
+        seller: true,
+        color: false,
+        premiumBrands: false,
+        releaseDate: false
+    });
+
+    const toggleSection = (section: string) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [section]: !prev[section]
+        }));
+    };
 
     const products = [
         {

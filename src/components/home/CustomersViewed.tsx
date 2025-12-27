@@ -46,9 +46,9 @@ const CustomersViewed: React.FC = () => {
                     display: "grid",
                     gridTemplateColumns: {
                         xs: "repeat(2, 1fr)",
-                        sm: "repeat(3, 1fr)",
-                        md: "repeat(6, 1fr)",
-                        lg: "repeat(12, 1fr)"
+                        sm: "repeat(4, 1fr)",
+                        md: "repeat(8, 1fr)",
+                        lg: "repeat(10, 1fr)"
                     },
                     gap: 2
                 }}>
@@ -60,7 +60,7 @@ const CustomersViewed: React.FC = () => {
                             price={product.price}
                             shipping={product.shipping}
                         />
-                    ))}
+                    )).slice(0, 10)}
                 </Box>
             </Box>
         </Box>

@@ -54,7 +54,7 @@ const CustomersViewed: React.FC = () => {
                 }}>
                     {products.map((product, index) => (
                         <ProductCard
-                            key={`product-${index}`}
+                            key={`${product.reviews}-${product.price}-${product.shipping}`}
                             index={index}
                             reviews={product.reviews}
                             price={product.price}

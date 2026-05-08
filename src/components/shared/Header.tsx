@@ -4,7 +4,6 @@ import { Box, Typography, InputBase, IconButton, Button, MenuItem, Select, Drawe
 import { Search, ShoppingCart, Menu as MenuIcon, Close as CloseIcon, AccountCircle, LocationOn, Language, ChevronRight, ArrowDropDown } from "@mui/icons-material";
 import Link from "next/link";
 import React, { useState } from "react";
-import DepartmentsDropdown from "./DepartmentsDropdown";
 
 const Header = () => {
     const theme = useTheme();
@@ -13,55 +12,30 @@ const Header = () => {
     const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
     const [selectedValue, setSelectedValue] = useState("All");
 
-    const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    const handleChange = (event: any) => {
         setSelectedValue(event.target.value);
     };
 
-    const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
-    };
-
-    const toggleDesktopMenu = () => {
-        setDesktopMenuOpen(!desktopMenuOpen);
-    };
-
-    const topMenuItems = ["Video", "Deals", "Books", "Hula Basics", "Buy Again", "Best Sellers"];
-    const bottomMenuItems = ["Today's Deals", "Customer Service", "Registry", "Gift Cards", "Sell"];
+    const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+    const toggleDesktopMenu = () => setDesktopMenuOpen(!desktopMenuOpen);
 
     return (
         <Box>
-            {/* Main Header */}
-            <Box sx={{ backgroundColor: "#036A47", color: "white", padding: { xs: "8px 12px", sm: "8px 16px" } }}>
-                <Box display="flex" alignItems="center" justifyContent="space-between" gap={{ xs: 1, sm: 2 }}>
-                    {/* Left: Logo, Menu Icon (Mobile), & Delivery Location */}
-                    <Box display="flex" alignItems="center" gap={{ xs: 1, sm: 1.5 }}>
+            <Box sx={{ backgroundColor: "#036A47", color: "white", padding: "8px 16px" }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 2 }}>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
                         {isMobile && (
-                            <IconButton
-                                onClick={toggleMobileMenu}
-                                sx={{ color: "white", padding: "8px" }}
-                                size="small"
-                            >
+                            <IconButton onClick={toggleMobileMenu} sx={{ color: "white" }} size="small">
                                 <MenuIcon />
                             </IconButton>
                         )}
                         <Link href="/" style={{ textDecoration: "none" }}>
-                            <Typography
-                                sx={{
-                                    fontSize: { xs: "16px", sm: "22px" },
-                                    fontWeight: "900",
-                                    color: "white",
-                                    cursor: "pointer",
-                                    "&:hover": { opacity: 0.8 },
-                                    whiteSpace: "nowrap",
-                                }}
-                            >
+                            <Typography sx={{ fontSize: "22px", fontWeight: "900", color: "white", cursor: "pointer" }}>
                                 Hula Market
                             </Typography>
                         </Link>
-
-                        {/* Desktop Only: Deliver To Location - Next to Logo */}
                         {!isMobile && (
-                            <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: "pointer", "&:hover": { opacity: 0.8 }, paddingLeft: 2 }}>
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, cursor: "pointer", paddingLeft: 2 }}>
                                 <LocationOn sx={{ fontSize: "16px" }} />
                                 <Box>
                                     <Typography sx={{ fontSize: "11px", opacity: 0.9 }}>Deliver to Kenya</Typography>
@@ -71,674 +45,61 @@ const Header = () => {
                         )}
                     </Box>
 
-                    {/* Center: Search Bar - Desktop Only */}
                     {!isMobile && (
-                        <Box
-                            display="flex"
-                            alignItems="stretch"
-                            sx={{
-                                backgroundColor: "white",
-                                borderRadius: "4px",
-                                width: "70%",
-                                overflow: "visible",
-                                border: "3px solid transparent",
-                                "&:focus-within": {
-                                    borderColor: "#FF9900",
-                                },
-                            }}
-                        >
+                        <Box sx={{ display: "flex", flex: 1, margin: "0 20px", backgroundColor: "white", borderRadius: "4px" }}>
                             <Select
                                 value={selectedValue}
                                 onChange={handleChange}
                                 displayEmpty
                                 IconComponent={ArrowDropDown}
-                                MenuProps={{
-                                    PaperProps: {
-                                        sx: {
-                                            maxHeight: "500px",
-                                            marginTop: "4px",
-                                            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                                            "& .MuiMenuItem-root": {
-                                                fontSize: "13px",
-                                                padding: "8px 16px",
-                                                "&:hover": {
-                                                    backgroundColor: "#f0f2f2",
-                                                },
-                                            },
-                                        },
-                                    },
-                                }}
+                                size="small"
                                 sx={{
-                                    minWidth: "50px",
-                                    paddingLeft: "10px",
-                                    paddingRight: "4px",
+                                    minWidth: "60px",
                                     backgroundColor: "#f3f3f3",
-                                    border: "none",
                                     borderRight: "1px solid #cdcdcd",
                                     borderRadius: "4px 0 0 4px",
                                     "& .MuiOutlinedInput-notchedOutline": { border: "none" },
-                                    "& .MuiSelect-select": {
-                                        fontSize: "13px",
-                                        paddingRight: "24px !important",
-                                        color: "#0F1111",
-                                        fontWeight: "400",
-                                    },
-                                    "&:hover": {
-                                        backgroundColor: "#e3e6e6",
-                                    },
-                                    "& .MuiSvgIcon-root": {
-                                        color: "#6b6b6b",
-                                        fontSize: "20px",
-                                    },
                                 }}
-                                size="small"
                             >
                                 <MenuItem value="All">All</MenuItem>
-                                <MenuItem value="Arts & Crafts">Arts & Crafts</MenuItem>
-                                <MenuItem value="Automotive">Automotive</MenuItem>
-                                <MenuItem value="Baby">Baby</MenuItem>
-                                <MenuItem value="Beauty & Personal Care">Beauty & Personal Care</MenuItem>
-                                <MenuItem value="Books">Books</MenuItem>
-                                <MenuItem value="Boys' Fashion">Boys' Fashion</MenuItem>
-                                <MenuItem value="Computers">Computers</MenuItem>
-                                <MenuItem value="Deals">Deals</MenuItem>
-                                <MenuItem value="Digital Music">Digital Music</MenuItem>
                                 <MenuItem value="Electronics">Electronics</MenuItem>
-                                <MenuItem value="Girls' Fashion">Girls' Fashion</MenuItem>
-                                <MenuItem value="Health & Household">Health & Household</MenuItem>
-                                <MenuItem value="Home & Kitchen">Home & Kitchen</MenuItem>
-                                <MenuItem value="Industrial & Scientific">Industrial & Scientific</MenuItem>
-                                <MenuItem value="Kindle Store">Kindle Store</MenuItem>
-                                <MenuItem value="Luggage">Luggage</MenuItem>
-                                <MenuItem value="Men's Fashion">Men's Fashion</MenuItem>
-                                <MenuItem value="Movies & TV">Movies & TV</MenuItem>
-                                <MenuItem value="Music, CDs & Vinyl">Music, CDs & Vinyl</MenuItem>
-                                <MenuItem value="Pet Supplies">Pet Supplies</MenuItem>
-                                <MenuItem value="Sports & Outdoors">Sports & Outdoors</MenuItem>
-                                <MenuItem value="Tools & Home Improvement">Tools & Home Improvement</MenuItem>
-                                <MenuItem value="Toys & Games">Toys & Games</MenuItem>
-                                <MenuItem value="Video Games">Video Games</MenuItem>
-                                <MenuItem value="Women's Fashion">Women's Fashion</MenuItem>
                             </Select>
-                            <InputBase
-                                sx={{
-                                    flex: 1,
-                                    paddingX: 1.5,
-                                    fontWeight: "400",
-                                    fontSize: "14px",
-                                    color: "#0F1111",
-                                }}
-                                placeholder="Search Hula Market"
-                            />
-                            <IconButton
-                                type="submit"
-                                sx={{
-                                    backgroundColor: "#FF9900",
-                                    borderRadius: "0px 4px 4px 0px",
-                                    color: "#0F1111",
-                                    padding: "8px 16px",
-                                    "&:hover": { backgroundColor: "#e68a00" },
-                                }}
-                                size="small"
-                            >
-                                <Search sx={{ fontSize: "20px" }} />
+                            <InputBase sx={{ flex: 1, padding: "0 10px" }} placeholder="Search Hula Market" />
+                            <IconButton sx={{ backgroundColor: "#febd69", borderRadius: "0 4px 4px 0" }}>
+                                <Search />
                             </IconButton>
                         </Box>
                     )}
 
-                    {/* Right: Account, Orders, Cart, Language */}
-                    <Box display="flex" alignItems="center" gap={{ xs: 0.5, sm: 1.5 }}>
-                        {/* Language Button - Desktop Only */}
-                        {!isMobile && (
-                            <Button
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "13px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "4px",
-                                    padding: "4px 8px",
-                                    "&:hover": { opacity: 0.8 },
-                                }}
-                            >
-                                <Language sx={{ fontSize: "16px" }} />
-                                EN
-                            </Button>
-                        )}
-
-                        {/* Account Button */}
-                        {isMobile ? (
-                            <Box display="flex" alignItems="center" gap="4px">
-                                <Typography sx={{ fontSize: "12px" }}>Sign in</Typography>
-                                <IconButton color="inherit" sx={{ color: "white", padding: "4px" }}>
-                                    <AccountCircle sx={{ fontSize: "24px" }} />
-                                </IconButton>
-                            </Box>
-                        ) : (
-                            <Button
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "13px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "flex-start",
-                                    padding: "4px 8px",
-                                    "&:hover": { opacity: 0.8 },
-                                }}
-                            >
-                                <Typography sx={{ fontSize: "11px", opacity: 0.9 }}>Hello, Sign in</Typography>
-                                <Typography sx={{ fontSize: "13px", fontWeight: "bold" }}>Account & Lists</Typography>
-                            </Button>
-                        )}
-
-                        {/* Orders Button - Desktop Only */}
-                        {!isMobile && (
-                            <Button
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "13px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "flex-start",
-                                    padding: "4px 8px",
-                                    "&:hover": { opacity: 0.8 },
-                                }}
-                            >
-                                <Typography sx={{ fontSize: "11px", opacity: 0.9 }}>Returns</Typography>
-                                <Typography sx={{ fontSize: "13px", fontWeight: "bold" }}>& Orders</Typography>
-                            </Button>
-                        )}
-
-                        {/* Cart */}
-                        <Box sx={{ display: "flex", alignItems: "center", gap: "4px", padding: "4px 8px", position: "relative" }}>
-                            <IconButton color="inherit" sx={{ color: "white", padding: "4px", position: "relative" }}>
-                                <ShoppingCart sx={{ fontSize: { xs: "24px", sm: "28px" } }} />
-                                <Box
-                                    sx={{
-                                        position: "absolute",
-                                        top: "-4px",
-                                        right: "-8px",
-                                        backgroundColor: "#FF9900",
-                                        color: "#036A47",
-                                        borderRadius: "50%",
-                                        width: "22px",
-                                        height: "22px",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        fontSize: "12px",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    0
-                                </Box>
-                            </IconButton>
-                            {!isMobile && (
-                                <Typography sx={{ fontSize: "13px", fontWeight: "bold", cursor: "pointer" }}>
-                                    Cart
-                                </Typography>
-                            )}
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                        <Box sx={{ cursor: "pointer" }}>
+                            <Typography sx={{ fontSize: "12px" }}>Hello, sign in</Typography>
+                            <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>Account & Lists</Typography>
                         </Box>
+                        <Link href="/cart" style={{ textDecoration: "none", color: "white" }}>
+                            <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+                                <ShoppingCart sx={{ fontSize: "32px" }} />
+                                <Typography sx={{ fontWeight: "bold", fontSize: "14px" }}>Cart</Typography>
+                            </Box>
+                        </Link>
                     </Box>
                 </Box>
-
-                {/* Mobile: Search Bar Below Main Header */}
-                {isMobile && (
-                    <Box
-                        display="flex"
-                        alignItems="stretch"
-                        sx={{
-                            backgroundColor: "white",
-                            borderRadius: "4px",
-                            marginTop: "8px",
-                            overflow: "hidden",
-                        }}
-                    >
-                        <InputBase
-                            sx={{
-                                flex: 1,
-                                paddingX: 1.5,
-                                fontWeight: "500",
-                                fontSize: "14px",
-                            }}
-                            placeholder="Search Hula Market"
-                        />
-                        <IconButton
-                            type="submit"
-                            sx={{
-                                backgroundColor: "#FF9900",
-                                borderRadius: "0px",
-                                color: "white",
-                                padding: "8px 12px",
-                                "&:hover": { backgroundColor: "#e68a00" },
-                            }}
-                            size="small"
-                        >
-                            <Search sx={{ fontSize: "18px" }} />
-                        </IconButton>
-                    </Box>
-                )}
             </Box>
 
-            {/* Mobile: Deliver To Location - Below Search */}
-            {isMobile && (
-                <Box sx={{ backgroundColor: "#036A47", color: "white", padding: "8px 12px", fontSize: "12px" }}>
-                    <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: "pointer", "&:hover": { opacity: 0.8 } }}>
-                        <LocationOn sx={{ fontSize: "14px" }} />
-                        <Typography sx={{ fontSize: "12px" }}>Deliver to Shamir - Nairobi 11011 -00100 GPO</Typography>
-                    </Box>
-                </Box>
-            )}
-
-            {/* Navigation Menu */}
-            {isMobile ? (
-                // Mobile: Horizontal scrolling menu items below deliver location
-                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "0px", overflowX: "auto", scrollBehavior: "smooth" }}>
-                    <Box display="flex" gap={0} sx={{ minWidth: "fit-content" }}>
-                        {topMenuItems.map((label) => (
-                            <Button
-                                key={label}
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "12px",
-                                    fontWeight: "500",
-                                    padding: "8px 12px",
-                                    whiteSpace: "nowrap",
-                                    borderRadius: "0px",
-                                    "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" },
-                                }}
-                            >
-                                {label}
-                            </Button>
-                        ))}
-                    </Box>
-                </Box>
-            ) : (
-                // Desktop: Dark green navigation bar with "All" button
-                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "8px 16px", position: "relative" }}>
-                    <Box display="flex" alignItems="center" gap={2}>
-                        {/* All Button with Menu Icon */}
-                        <Button
-                            onClick={toggleDesktopMenu}
-                            color="inherit"
-                            startIcon={<MenuIcon />}
-                            sx={{
-                                textTransform: "none",
-                                fontSize: "13px",
-                                fontWeight: "600",
-                                padding: "4px 12px",
-                                backgroundColor: "rgba(255,255,255,0.1)",
-                                "&:hover": { backgroundColor: "rgba(255,255,255,0.2)", borderRadius: "4px" },
-                            }}
-                        >
-                            All
-                        </Button>
-                        {bottomMenuItems.map((label) => (
-                            <Button
-                                key={label}
-                                color="inherit"
-                                sx={{
-                                    textTransform: "none",
-                                    fontSize: "13px",
-                                    fontWeight: "500",
-                                    padding: "4px 8px",
-                                    "&:hover": { backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "4px" },
-                                }}
-                            >
-                                {label}
-                            </Button>
-                        ))}
-                    </Box>
-                
-                </Box>
-            )}
-
-              {/* Mobile Drawer Menu */}
-            <Drawer
-                anchor="left"
-                open={mobileMenuOpen}
-                onClose={toggleMobileMenu}
-                sx={{
-                    "& .MuiDrawer-paper": {
-                        width: "320px",
-                        backgroundColor: "#fff",
-                    },
-                }}
-            >
-                {/* Header Section */}
-                <Box
-                    sx={{
-                        padding: "20px 16px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        backgroundColor: "#232f3e",
-                        color: "white",
-                    }}
-                >
-                    <Box display="flex" alignItems="center" gap={2}>
-                        <AccountCircle sx={{ fontSize: "32px" }} />
+            <Drawer anchor="left" open={mobileMenuOpen || desktopMenuOpen} onClose={() => { setMobileMenuOpen(false); setDesktopMenuOpen(false); }}>
+                <Box sx={{ width: 300 }}>
+                    <Box sx={{ padding: "20px 16px", backgroundColor: "#232f3e", color: "white" }}>
                         <Typography sx={{ fontWeight: "bold", fontSize: "18px" }}>Hello, sign in</Typography>
                     </Box>
-                    <IconButton
-                        onClick={toggleMobileMenu}
-                        sx={{
-                            color: "white",
-                            "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" }
-                        }}
-                    >
-                        <CloseIcon />
-                    </IconButton>
-                </Box>
-
-                {/* Digital Content & Devices */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Digital Content & Devices
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Prime Video", "Hula Music", "Kindle E-readers & Books", "Hula Appstore"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-                {/* Shop by Department */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Shop by Department
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Electronics", "Computers", "Smart Home", "Arts & Crafts"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                        <ListItem
-                            sx={{
-                                padding: "12px 16px 12px 32px",
-                                cursor: "pointer",
-                                "&:hover": { backgroundColor: "#f0f0f0" }
-                            }}
-                        >
-                            <ListItemText
-                                primary="See all"
-                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
-                            />
-                        </ListItem>
-                    </List>
-                </Box>
-
-                {/* Programs & Features */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Programs & Features
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Gift Cards", "Shop By Interest", "Hula Live", "International Shopping"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                        <ListItem
-                            sx={{
-                                padding: "12px 16px 12px 32px",
-                                cursor: "pointer",
-                                "&:hover": { backgroundColor: "#f0f0f0" }
-                            }}
-                        >
-                            <ListItemText
-                                primary="See all"
-                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
-                            />
-                        </ListItem>
-                    </List>
-                </Box>
-
-                {/* Help & Settings */}
-                <Box>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Help & Settings
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Your Account", "English", "United States", "Customer Service", "Sign In"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" }
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
+                    <List>
+                        {["Home", "Today's Deals", "Customer Service"].map((item) => (
+                            <ListItem key={item}>
+                                <ListItemText primary={item} />
                             </ListItem>
                         ))}
                     </List>
                 </Box>
             </Drawer>
-
-            {/* Desktop Drawer Menu */}
-            <Drawer
-                anchor="left"
-                open={desktopMenuOpen}
-                onClose={toggleDesktopMenu}
-                sx={{
-                    "& .MuiDrawer-paper": {
-                        width: "320px",
-                        backgroundColor: "#fff",
-                    },
-                }}
-            >
-                {/* Header Section */}
-                <Box
-                    sx={{
-                        padding: "20px 16px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        backgroundColor: "#232f3e",
-                        color: "white",
-                    }}
-                >
-                    <Box display="flex" alignItems="center" gap={2}>
-                        <AccountCircle sx={{ fontSize: "32px" }} />
-                        <Typography sx={{ fontWeight: "bold", fontSize: "18px" }}>Hello, sign in</Typography>
-                    </Box>
-                    <IconButton
-                        onClick={toggleDesktopMenu}
-                        sx={{
-                            color: "white",
-                            "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" }
-                        }}
-                    >
-                        <CloseIcon />
-                    </IconButton>
-                </Box>
-
-                {/* Digital Content & Devices */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Digital Content & Devices
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Prime Video", "Hula Music", "Kindle E-readers & Books", "Hula Appstore"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-
-                {/* Shop by Department */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Shop by Department
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Electronics", "Computers", "Smart Home", "Arts & Crafts"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                        <ListItem
-                            sx={{
-                                padding: "12px 16px 12px 32px",
-                                cursor: "pointer",
-                                "&:hover": { backgroundColor: "#f0f0f0" }
-                            }}
-                        >
-                            <ListItemText
-                                primary="See all"
-                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
-                            />
-                        </ListItem>
-                    </List>
-                </Box>
-
-                {/* Programs & Features */}
-                <Box sx={{ borderBottom: "1px solid #ddd" }}>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Programs & Features
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Gift Cards", "Shop By Interest", "Hula Live", "International Shopping"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" },
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center"
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                                <ChevronRight sx={{ fontSize: "18px", color: "#666" }} />
-                            </ListItem>
-                        ))}
-                        <ListItem
-                            sx={{
-                                padding: "12px 16px 12px 32px",
-                                cursor: "pointer",
-                                "&:hover": { backgroundColor: "#f0f0f0" }
-                            }}
-                        >
-                            <ListItemText
-                                primary="See all"
-                                slotProps={{ primary: { sx: { fontSize: "14px", color: "#007185" } } }}
-                            />
-                        </ListItem>
-                    </List>
-                </Box>
-
-                {/* Help & Settings */}
-                <Box>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "16px", padding: "16px 16px 8px", color: "#0F1111" }}>
-                        Help & Settings
-                    </Typography>
-                    <List sx={{ padding: 0 }}>
-                        {["Your Account", "English", "United States", "Customer Service", "Sign In"].map((item) => (
-                            <ListItem
-                                key={item}
-                                sx={{
-                                    padding: "12px 16px 12px 32px",
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#f0f0f0" }
-                                }}
-                            >
-                                <ListItemText
-                                    primary={item}
-                                    slotProps={{ primary: { sx: { fontSize: "14px", color: "#0F1111" } } }}
-                                />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-            </Drawer>
-
-          
         </Box>
     );
 };

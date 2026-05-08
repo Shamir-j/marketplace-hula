@@ -43,18 +43,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
             />
 
             <CardContent>
-                <Typography variant="subtitle2" fontWeight="normal" gutterBottom color="black">
+                <Typography variant="subtitle2" sx={{ fontWeight: "normal" }} gutterBottom color="black">
                     {title}
                 </Typography>
 
-                <Box display="flex" alignItems="left" mb={1} flexDirection="column">
+                <Box sx={{   display: "flex" ,  alignItems: "left"  ,   mb: 1 ,  flexDirection: "column"   }}>
                     {topRated && (
-                        <Typography variant="body2" color="black" fontWeight="bold" mb={1}>
+                        <Typography variant="body2" color="black" sx={{  fontWeight: "bold" ,  mb: 1  }}>
                             #1 Top Rated
                         </Typography>
                     )}
 
-                    <Box display="flex" alignItems="left" mb={1} flexDirection="row">
+                    <Box sx={{   display: "flex" ,  alignItems: "left"  ,   mb: 1 ,  flexDirection: "row"   }}>
                         <Rating value={rating} precision={0.1} readOnly size="small" />
                         <Typography variant="inherit" color="textSecondary" sx={{ ml: 2 }}>
                             {ratingCount.toLocaleString()}
@@ -68,8 +68,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     </Typography>
                 )}
 
-                <Box mt={2} mb={2}>
-                    <Typography variant="h6" component="div" fontWeight="bold">
+                <Box sx={{  mt: 2 ,  mb: 2  }}>
+                    <Typography variant="h6" component="div" sx={{ fontWeight: "bold" }}>
                         ${price.toFixed(2)}
                     </Typography>
                     {oldPrice && (
@@ -94,7 +94,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 </Button>
 
                 {moreBuyingOptions && (
-                    <Box mt={2}>
+                    <Box sx={{ mt: 2 }}>
                         <Typography variant="body2" color="primary">
                             More Buying Choices
                         </Typography>

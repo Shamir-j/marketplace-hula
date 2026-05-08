@@ -1,6 +1,6 @@
 import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemText, Stepper, Step, StepLabel, StepContent } from "@mui/material";
 import AssignmentReturnIcon from "@mui/icons-material/AssignmentReturn";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import { Metadata } from "next";
@@ -97,7 +97,7 @@ export default function ReturnsAndReplacements() {
                 {/* 1. Return Eligibility */}
                 <Box sx={sectionStyle}>
                     <Typography variant="h5" sx={headingStyle}>
-                        <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
+                        <CheckCircleOutlinedIcon sx={{ color: "#4caf50" }} />
                         1. Return Eligibility
                     </Typography>
 

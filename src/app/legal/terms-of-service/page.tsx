@@ -1,5 +1,5 @@
 import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import GavelIcon from "@mui/icons-material/Gavel";
 import { Metadata } from "next";
@@ -82,7 +82,7 @@ export default function ConditionsOfUse() {
                         <List>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                    <CheckCircleOutlinedIcon sx={{ color: "#2196f3" }} />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Hula Market (Consumer Marketplace)"
@@ -91,7 +91,7 @@ export default function ConditionsOfUse() {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                    <CheckCircleOutlinedIcon sx={{ color: "#2196f3" }} />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Pixel Point POS (Merchant Point-of-Sale Application)"
@@ -100,7 +100,7 @@ export default function ConditionsOfUse() {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                    <CheckCircleOutlinedIcon sx={{ color: "#2196f3" }} />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Pixel Point Terminal (Store Checkout Application)"
@@ -109,7 +109,7 @@ export default function ConditionsOfUse() {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon sx={{ color: "#2196f3" }} />
+                                    <CheckCircleOutlinedIcon sx={{ color: "#2196f3" }} />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Other current and future Pixel Point-powered applications"
@@ -132,7 +132,7 @@ export default function ConditionsOfUse() {
                     <List sx={{ backgroundColor: "#fff", borderRadius: 1, p: 2 }}>
                         <ListItem>
                             <ListItemIcon>
-                                <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
+                                <CheckCircleOutlinedIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
                             <ListItemText
                                 primary="Marketplace Platform"
@@ -141,7 +141,7 @@ export default function ConditionsOfUse() {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
+                                <CheckCircleOutlinedIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
                             <ListItemText
                                 primary="Seller Management Tools"
@@ -150,7 +150,7 @@ export default function ConditionsOfUse() {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
+                                <CheckCircleOutlinedIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
                             <ListItemText
                                 primary="Payment Processing"
@@ -159,7 +159,7 @@ export default function ConditionsOfUse() {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <CheckCircleOutlineIcon sx={{ color: "#4caf50" }} />
+                                <CheckCircleOutlinedIcon sx={{ color: "#4caf50" }} />
                             </ListItemIcon>
                             <ListItemText
                                 primary="Fulfillment Services"

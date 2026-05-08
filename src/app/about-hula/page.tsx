@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Grid2, Button, Chip } from "@mui/material";
+import { Box, Typography, Container, Divider, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Grid, Button, Chip } from "@mui/material";
 import StoreIcon from "@mui/icons-material/Store";
 import PeopleIcon from "@mui/icons-material/People";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
@@ -160,8 +160,8 @@ export default function AboutHula() {
 
             {/* Mission & Vision Cards */}
             <Container maxWidth="lg" sx={{ py: 6, mb: 4 }}>
-                <Grid2 container spacing={3}>
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                <Grid container spacing={3}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card
                             sx={{
                                 height: "100%",
@@ -188,9 +188,9 @@ export default function AboutHula() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card
                             sx={{
                                 height: "100%",
@@ -217,8 +217,8 @@ export default function AboutHula() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
 
             {/* Who We Are Section */}
@@ -230,57 +230,57 @@ export default function AboutHula() {
                     </Typography>
                 </Box>
 
-                <Grid2 container spacing={3} sx={{ mb: 4 }}>
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                <Grid container spacing={3} sx={{ mb: 4 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
                             Hula Market is a next-generation e-commerce platform operated by Continuum Technologies, headquartered in Nairobi, Kenya. We're a team of experienced entrepreneurs, technologists, and business professionals dedicated to revolutionizing online commerce across East Africa.
                         </Typography>
                         <Typography sx={{ color: "#555", lineHeight: 1.8, fontSize: "1rem" }}>
                             Built by locals, for locals, with a vision to create economic opportunities for thousands of SMEs and millions of consumers who deserve better.
                         </Typography>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card sx={{ backgroundColor: "#fff", border: "1px solid #e8e8e8", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
                             <CardContent sx={{ p: 3 }}>
-                                <Grid2 container spacing={2}>
-                                    <Grid2 size={{ xs: 6 }}>
+                                <Grid container spacing={2}>
+                                    <Grid size={{ xs: 6 }}>
                                         <Box sx={{ mb: 2 }}>
                                             <Typography sx={{ fontWeight: "700", color: "#2196f3", fontSize: "1.8rem", mb: 0.5 }}>
                                                 100+
                                             </Typography>
                                             <Typography sx={{ color: "#666", fontSize: "0.9rem" }}>Team Members</Typography>
                                         </Box>
-                                    </Grid2>
-                                    <Grid2 size={{ xs: 6 }}>
+                                    </Grid>
+                                    <Grid size={{ xs: 6 }}>
                                         <Box sx={{ mb: 2 }}>
                                             <Typography sx={{ fontWeight: "700", color: "#4caf50", fontSize: "1.8rem", mb: 0.5 }}>
                                                 4
                                             </Typography>
                                             <Typography sx={{ color: "#666", fontSize: "0.9rem" }}>Countries</Typography>
                                         </Box>
-                                    </Grid2>
-                                    <Grid2 size={{ xs: 6 }}>
+                                    </Grid>
+                                    <Grid size={{ xs: 6 }}>
                                         <Box sx={{ mb: 2 }}>
                                             <Typography sx={{ fontWeight: "700", color: "#ff9800", fontSize: "1.8rem", mb: 0.5 }}>
                                                 2024
                                             </Typography>
                                             <Typography sx={{ color: "#666", fontSize: "0.9rem" }}>Founded</Typography>
                                         </Box>
-                                    </Grid2>
-                                    <Grid2 size={{ xs: 6 }}>
+                                    </Grid>
+                                    <Grid size={{ xs: 6 }}>
                                         <Box>
                                             <Typography sx={{ fontWeight: "700", color: "#9c27b0", fontSize: "1.8rem", mb: 0.5 }}>
                                                 50K+
                                             </Typography>
                                             <Typography sx={{ color: "#666", fontSize: "0.9rem" }}>Active Buyers</Typography>
                                         </Box>
-                                    </Grid2>
-                                </Grid2>
+                                    </Grid>
+                                </Grid>
                             </CardContent>
                         </Card>
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
 
             {/* Core Values Section */}
@@ -293,9 +293,9 @@ export default function AboutHula() {
                         </Typography>
                     </Box>
 
-                    <Grid2 container spacing={3}>
+                    <Grid container spacing={3}>
                         {coreValues.map((value, index) => (
-                            <Grid2 size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                                 <Card
                                     sx={{
                                         height: "100%",
@@ -322,9 +322,9 @@ export default function AboutHula() {
                                         </Typography>
                                     </CardContent>
                                 </Card>
-                            </Grid2>
+                            </Grid>
                         ))}
-                    </Grid2>
+                    </Grid>
                 </Container>
             </Box>
 
@@ -337,8 +337,8 @@ export default function AboutHula() {
                     </Typography>
                 </Box>
 
-                <Grid2 container spacing={3}>
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                <Grid container spacing={3}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card sx={{ border: "2px solid #4caf50", backgroundColor: "#f1f8f5", height: "100%" }}>
                             <CardContent sx={{ p: 3 }}>
                                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
@@ -373,9 +373,9 @@ export default function AboutHula() {
                                 </List>
                             </CardContent>
                         </Card>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <Card sx={{ border: "2px solid #2196f3", backgroundColor: "#f0f7ff", height: "100%" }}>
                             <CardContent sx={{ p: 3 }}>
                                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
@@ -410,8 +410,8 @@ export default function AboutHula() {
                                 </List>
                             </CardContent>
                         </Card>
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
 
             {/* Our Journey - Timeline */}
@@ -479,8 +479,8 @@ export default function AboutHula() {
                     </Typography>
                 </Box>
 
-                <Grid2 container spacing={3}>
-                    <Grid2 size={{ xs: 12, md: 4 }}>
+                <Grid container spacing={3}>
+                    <Grid size={{ xs: 12, md: 4 }}>
                         <Card sx={{ backgroundColor: "#fff", border: "1px solid #e8e8e8", height: "100%", "&:hover": { boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }, transition: "all 0.3s ease" }}>
                             <CardContent sx={{ p: 3 }}>
                                 <Box sx={{ backgroundColor: "#e3f2fd", p: 1.5, borderRadius: 1, mb: 2, display: "inline-block" }}>
@@ -490,22 +490,22 @@ export default function AboutHula() {
                                 <List dense>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#2196f3" }} /></ListItemIcon>
-                                        <ListItemText primary="Transparency & honesty" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Transparency & honesty" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#2196f3" }} /></ListItemIcon>
-                                        <ListItemText primary="Security & fraud protection" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Security & fraud protection" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#2196f3" }} /></ListItemIcon>
-                                        <ListItemText primary="24/7 customer support" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="24/7 customer support" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                 </List>
                             </CardContent>
                         </Card>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 size={{ xs: 12, md: 4 }}>
+                    <Grid size={{ xs: 12, md: 4 }}>
                         <Card sx={{ backgroundColor: "#fff", border: "1px solid #e8e8e8", height: "100%", "&:hover": { boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }, transition: "all 0.3s ease" }}>
                             <CardContent sx={{ p: 3 }}>
                                 <Box sx={{ backgroundColor: "#f0f4c3", p: 1.5, borderRadius: 1, mb: 2, display: "inline-block" }}>
@@ -515,22 +515,22 @@ export default function AboutHula() {
                                 <List dense>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#9c27b0" }} /></ListItemIcon>
-                                        <ListItemText primary="Economic empowerment" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Economic empowerment" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#9c27b0" }} /></ListItemIcon>
-                                        <ListItemText primary="Fair trade practices" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Fair trade practices" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#9c27b0" }} /></ListItemIcon>
-                                        <ListItemText primary="Social responsibility" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Social responsibility" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                 </List>
                             </CardContent>
                         </Card>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 size={{ xs: 12, md: 4 }}>
+                    <Grid size={{ xs: 12, md: 4 }}>
                         <Card sx={{ backgroundColor: "#fff", border: "1px solid #e8e8e8", height: "100%", "&:hover": { boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }, transition: "all 0.3s ease" }}>
                             <CardContent sx={{ p: 3 }}>
                                 <Box sx={{ backgroundColor: "#e0f2f1", p: 1.5, borderRadius: 1, mb: 2, display: "inline-block" }}>
@@ -540,21 +540,21 @@ export default function AboutHula() {
                                 <List dense>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#4caf50" }} /></ListItemIcon>
-                                        <ListItemText primary="AI & mobile-first tech" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="AI & mobile-first tech" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#4caf50" }} /></ListItemIcon>
-                                        <ListItemText primary="Strategic partnerships" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="Strategic partnerships" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                     <ListItem sx={{ py: 0.4 }}>
                                         <ListItemIcon sx={{ minWidth: "24px" }}><ArrowRightIcon sx={{ fontSize: "1rem", color: "#4caf50" }} /></ListItemIcon>
-                                        <ListItemText primary="User-driven improvement" primaryTypographyProps={{ sx: { fontSize: "0.85rem" } }} />
+                                        <ListItemText primary="User-driven improvement" slotProps={{ primary: { sx: { fontSize: "0.85rem" } } }} />
                                     </ListItem>
                                 </List>
                             </CardContent>
                         </Card>
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
 
             {/* Contact Section */}
@@ -569,43 +569,43 @@ export default function AboutHula() {
                         </Typography>
                     </Box>
 
-                    <Grid2 container spacing={3}>
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+                    <Grid container spacing={3}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>General Inquiries</Typography>
                                     <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>hello@hulamarket.co.ke</Typography>
                                 </CardContent>
                             </Card>
-                        </Grid2>
+                        </Grid>
 
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>Customer Support</Typography>
                                     <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>support@hulamarket.co.ke</Typography>
                                 </CardContent>
                             </Card>
-                        </Grid2>
+                        </Grid>
 
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>Seller Support</Typography>
                                     <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>sellers@hulamarket.co.ke</Typography>
                                 </CardContent>
                             </Card>
-                        </Grid2>
+                        </Grid>
 
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>Phone</Typography>
                                     <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>+254 700-HULA-01</Typography>
                                 </CardContent>
                             </Card>
-                        </Grid2>
-                    </Grid2>
+                        </Grid>
+                    </Grid>
                 </Container>
             </Box>
 

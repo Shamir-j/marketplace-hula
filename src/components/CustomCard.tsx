@@ -34,8 +34,8 @@ const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel,
                         variant="h6" 
                         component="div" 
                         gutterBottom 
-                        fontWeight="700"
                         sx={{ 
+                            fontWeight: "700",
                             fontSize: { xs: "14px", sm: "16px" },
                             color: "#036A47",
                             lineHeight: 1.3
@@ -47,8 +47,8 @@ const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel,
                 <Typography 
                     variant="body2" 
                     color="text.secondary" 
-                    mb={2}
                     sx={{ 
+                        mb: 2,
                         fontSize: { xs: "12px", sm: "13px" },
                         lineHeight: 1.4
                     }}
@@ -57,7 +57,7 @@ const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel,
                 </Typography>
 
                 {/* Product Grid - Responsive */}
-                <Box display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={{ xs: 1, sm: 1.5 }}>
+                <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: { xs: 1, sm: 1.5 } }}>
                     {images.map((image, index) => (
                         <Box
                             key={index}
@@ -87,8 +87,8 @@ const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel,
                             <Typography 
                                 variant="caption" 
                                 color="text.secondary" 
-                                mt={0.5}
                                 sx={{ 
+                                    mt: 0.5,
                                     fontSize: { xs: "10px", sm: "11px" },
                                     textAlign: "center",
                                     lineHeight: 1.2,

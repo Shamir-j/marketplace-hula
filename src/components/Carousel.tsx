@@ -103,7 +103,7 @@ const ExampleCarousel: React.FC = () => {
                     boxShadow: "0 1px 3px rgba(0,0,0,0.1)"
                 }}
             >
-                <Box display="flex" justifyContent="space-between" alignItems="center" height="100%">
+                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%" }}>
                     {/* Left Arrow */}
                     <IconButton 
                         onClick={handlePrev} 

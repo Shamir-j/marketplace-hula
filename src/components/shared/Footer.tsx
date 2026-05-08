@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Grid2, Divider } from "@mui/material";
+import { Box, Typography, Button, Grid, Divider } from "@mui/material";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
@@ -149,9 +149,9 @@ const Footer = () => {
                 }}
             >
                 {/* Top 4 Columns */}
-                <Grid2 container spacing={6} sx={{ mb: 4 }}>
+                <Grid container spacing={6} sx={{ mb: 4 }}>
                     {footerSections.map((section) => (
-                        <Grid2 size={{ xs: 12, sm: 6, md: 3 }} key={section.title}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={section.title}>
                             <Typography
                                 variant="subtitle2"
                                 sx={{
@@ -182,15 +182,15 @@ const Footer = () => {
                                     </Button>
                                 ))}
                             </Box>
-                        </Grid2>
+                        </Grid>
                     ))}
-                </Grid2>
+                </Grid>
 
                 <Divider sx={{ backgroundColor: "#444", my: 4 }} />
                 {/* Bottom Links Grid */}
-                <Grid2 container spacing={3} sx={{ mb: 4 }}>
+                <Grid container spacing={3} sx={{ mb: 4 }}>
                     {bottomSections.map((section) => (
-                        <Grid2 size={{ xs: 12, sm: 6, md: 2 }} key={section.title}>
+                        <Grid size={{ xs: 12, sm: 6, md: 2 }} key={section.title}>
                             <Typography
                                 variant="body2"
                                 sx={{
@@ -228,9 +228,9 @@ const Footer = () => {
                                     </Button>
                                 ))}
                             </Box>
-                        </Grid2>
+                        </Grid>
                     ))}
-                </Grid2>
+                </Grid>
 
                 <Divider sx={{ backgroundColor: "#444", my: 4 }} />
 

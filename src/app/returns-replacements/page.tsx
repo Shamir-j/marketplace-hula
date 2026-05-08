@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Returns & Replacements - Hula Market",
     description: "Hassle-free returns and replacements within 30 days",
     type: "website",
-    url: "https://hulamarket.co.ke/returns-replacements",
+    url: "https://hula.co.ke/returns-replacements",
   },
 };
 
@@ -396,7 +396,7 @@ export default function ReturnsAndReplacements() {
                         A. Expired Return Window
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        Items returned after 30 days are generally non-returnable. However, defective items with proof of purchase may be eligible for warranty claims. Contact support@hulamarket.co.ke with photos and your order number.
+                        Items returned after 30 days are generally non-returnable. However, defective items with proof of purchase may be eligible for warranty claims. Contact support@hula.co.ke with photos and your order number.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
@@ -426,7 +426,7 @@ export default function ReturnsAndReplacements() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 Contact Our Returns Team:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: returns@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: returns@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Phone: +254 (0) 700-RETURN-1 (+254 700-738-8761)</Typography>
                             <Typography sx={{ mb: 1 }}>Hours: Monday-Saturday 8:00 AM - 8:00 PM EAT</Typography>
                             <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic", color: "#666" }}>

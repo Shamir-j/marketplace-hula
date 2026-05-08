@@ -32,7 +32,7 @@ const CustomCard: React.FC<CustomCardProps> = ({title, description, actionLabel,
                 {title && (
                     <Typography 
                         variant="h6" 
-                        component="div" 
+                        component="h2" 
                         gutterBottom 
                         sx={{ 
                             fontWeight: "700",

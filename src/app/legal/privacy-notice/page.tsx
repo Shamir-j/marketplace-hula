@@ -7,14 +7,14 @@ import GppGoodIcon from "@mui/icons-material/GppGood";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Notice - Pixel Point ERP Platform | Data Protection & Privacy Policy",
-    description: "Read the Pixel Point ERP Platform's comprehensive privacy notice. Learn how we collect, use, and protect your personal data across all platform applications. GDPR & CCPA compliant.",
-    keywords: "privacy policy, data protection, GDPR, CCPA, personal data, privacy notice",
+    title: "Privacy Notice - Hula Market | Pixel Point ERP Platform",
+    description: "Read Hula Market's comprehensive privacy notice. Learn how we collect, use, and protect your personal data across our marketplace and Pixel Point powered applications.",
+    keywords: "privacy policy, data protection, GDPR, CCPA, personal data, privacy notice, Hula Market",
     openGraph: {
-        title: "Privacy Notice - Pixel Point ERP Platform",
-        description: "Understand how the Pixel Point ERP Platform protects your privacy and personal data",
+        title: "Privacy Notice - Hula Market",
+        description: "Understand how Hula Market protects your privacy and personal data",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/privacy-notice",
+        url: "https://hula.co.ke/legal/privacy-notice",
     },
 };
 
@@ -905,7 +905,7 @@ export default function PrivacyNotice() {
                                 ℹ️ Vendor List Updates
                             </Typography>
                             <Typography sx={{ color: "#1565c0", fontSize: "0.9rem" }}>
-                                This list is current as of the "Last Updated" date above. We may add, remove, or change vendors as needed to improve platform services. For the most current vendor list, visit: <a href="/legal/vendor-list" style={{ color: "#0d47a1", textDecoration: "underline" }}>hulamarket.co.ke/legal/vendor-list</a>
+                                This list is current as of the "Last Updated" date above. We may add, remove, or change vendors as needed to improve platform services. For the most current vendor list, visit: <a href="/legal/vendor-list" style={{ color: "#0d47a1", textDecoration: "underline" }}>hula.co.ke/legal/vendor-list</a>
                             </Typography>
                         </CardContent>
                     </Card>
@@ -1053,7 +1053,7 @@ export default function PrivacyNotice() {
                         7. Children's Privacy
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Platform applications are not intended for children under 13 years old. We do not knowingly collect personal data from children under 13. If we become aware that we have collected data from a child under 13, we will delete it immediately. Parents or guardians who believe their child has provided information through platform applications should contact us at privacy@hulamarket.co.ke.
+                        Platform applications are not intended for children under 13 years old. We do not knowingly collect personal data from children under 13. If we become aware that we have collected data from a child under 13, we will delete it immediately. Parents or guardians who believe their child has provided information through platform applications should contact us at privacy@hula.co.ke.
                     </Typography>
                 </Box>
 
@@ -1161,7 +1161,7 @@ export default function PrivacyNotice() {
                         C. How to Exercise Your Rights
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        To exercise any of these rights, contact us at privacy@hulamarket.co.ke with "Data Subject Request" in the subject line. Include details about your request and proof of identity. We will respond within the timeframe required by applicable law (typically 30 days).
+                        To exercise any of these rights, contact us at privacy@hula.co.ke with "Data Subject Request" in the subject line. Include details about your request and proof of identity. We will respond within the timeframe required by applicable law (typically 30 days).
                     </Typography>
 
                     <Divider sx={{ my: 2 }} />
@@ -1274,7 +1274,7 @@ export default function PrivacyNotice() {
                         </List>
                     </Box>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        If you believe an automated decision has been made about you, you have the right to request human review and contestation of such decisions. Contact us at privacy@hulamarket.co.ke for more information.
+                        If you believe an automated decision has been made about you, you have the right to request human review and contestation of such decisions. Contact us at privacy@hula.co.ke for more information.
                     </Typography>
                 </Box>
 
@@ -1293,10 +1293,10 @@ export default function PrivacyNotice() {
                             <Typography sx={{ mb: 1 }}>
                                 <strong>Privacy Team</strong>
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hulamarket.co.ke</Typography>
-                            <Typography sx={{ mb: 0.5 }}>Data Protection Officer: dpo@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hula.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Data Protection Officer: dpo@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Address: Continuum Technologies, 11011-00111 GPO Nairobi</Typography>
-                            <Typography sx={{ mb: 1 }}>Support Portal: support.hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 1 }}>Support Portal: support.hula.co.ke</Typography>
                             <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic", color: "#666" }}>
                                 We aim to respond to all data privacy requests within 30 days.
                             </Typography>

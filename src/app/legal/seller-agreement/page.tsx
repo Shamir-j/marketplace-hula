@@ -6,14 +6,14 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Seller Agreement - Pixel Point ERP Platform | Marketplace Terms for Sellers",
-    description: "Comprehensive seller agreement for the Pixel Point ERP Platform marketplace. Learn about commission rates, payout schedules, seller responsibilities, and performance standards.",
-    keywords: "seller agreement, marketplace, commission rates, seller terms, vendor agreement",
+    title: "Seller Agreement - Hula Market | Marketplace Terms for Sellers",
+    description: "Comprehensive seller agreement for Hula Market. Learn about commission rates, payout schedules, seller responsibilities, and performance standards on our marketplace.",
+    keywords: "seller agreement, marketplace, commission rates, seller terms, vendor agreement, Hula Market",
     openGraph: {
-        title: "Seller Agreement - Pixel Point ERP Platform",
-        description: "Terms and conditions for sellers on the Pixel Point marketplace",
+        title: "Seller Agreement - Hula Market",
+        description: "Terms and conditions for sellers on Hula Market",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/seller-agreement",
+        url: "https://hula.co.ke/legal/seller-agreement",
     },
 };
 
@@ -747,8 +747,8 @@ export default function SellerAgreement() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 For seller support or questions about this agreement:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Seller Support Email: sellers@hulamarket.co.ke</Typography>
-                            <Typography sx={{ mb: 0.5 }}>General Legal: legal@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Seller Support Email: sellers@hula.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>General Legal: legal@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Phone: +254-XXX-XXXXXX (Mon-Fri, 8AM-6PM EAT)</Typography>
                             <Typography>Address: Continuum Technologies, 11011-00111 GPO Nairobi</Typography>
                         </CardContent>

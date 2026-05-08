@@ -7,14 +7,14 @@ import InfoIcon from "@mui/icons-material/Info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Your Ads Privacy Choices - Pixel Point ERP Platform | Ad Preferences",
-    description: "Manage your advertising preferences across Pixel Point ERP Platform applications. Control personalized ads, opt out of ad targeting, and protect your privacy.",
-    keywords: "ad privacy, advertising preferences, personalized ads, privacy settings, opt-out",
+    title: "Your Ads Privacy Choices - Hula Market | Ad Preferences",
+    description: "Manage your advertising preferences for Hula Market. Control personalized ads, opt out of ad targeting, and protect your privacy across our marketplace.",
+    keywords: "ad privacy, advertising preferences, personalized ads, privacy settings, opt-out, Hula Market",
     openGraph: {
-        title: "Your Ads Privacy Choices - Pixel Point ERP Platform",
-        description: "Control your advertising preferences across all platform applications",
+        title: "Your Ads Privacy Choices - Hula Market",
+        description: "Control your advertising preferences across Hula Market applications",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/ads-privacy",
+        url: "https://hula.co.ke/legal/ads-privacy",
     },
 };
 
@@ -273,7 +273,7 @@ export default function YourAdsPrivacyChoices() {
                                 <ListItemText primary="Clicking 'Unsubscribe' link at the bottom of any marketing email" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Contacting support@hulamarket.co.ke with 'Unsubscribe' in the subject" />
+                                <ListItemText primary="Contacting support@hula.co.ke with 'Unsubscribe' in the subject" />
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="It may take up to 10 business days to fully unsubscribe from all lists" />
@@ -439,7 +439,7 @@ export default function YourAdsPrivacyChoices() {
                         A. Request Your Advertising Profile
                     </Typography>
                     <Typography sx={{ mb: 2, color: "#555", lineHeight: 1.7 }}>
-                        You have the right to see what data we've collected about you for advertising purposes. Submit a request to privacy@hulamarket.co.ke with "Ad Profile Request" in the subject line.
+                        You have the right to see what data we've collected about you for advertising purposes. Submit a request to privacy@hula.co.ke with "Ad Profile Request" in the subject line.
                     </Typography>
 
                     <Typography variant="subtitle2" sx={subsectionHeading}>
@@ -469,7 +469,7 @@ export default function YourAdsPrivacyChoices() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 Contact Our Privacy Team:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Subject: "Ads Privacy Inquiry"</Typography>
                             <Typography sx={{ mb: 1 }}>Hours: Monday-Friday 9:00 AM - 6:00 PM EAT</Typography>
                             <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic", color: "#666" }}>

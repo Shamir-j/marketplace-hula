@@ -13,6 +13,7 @@ const CategoryCarousel: React.FC<CategoryCarouselProps> = ({ title }) => {
         <Box sx={{ width: "100%", marginTop: 2 }}>
             <Typography
                 variant="h6"
+                component="h2"
                 sx={{
                     fontSize: { xs: "16px", sm: "18px", md: "20px" },
                     fontWeight: "700",

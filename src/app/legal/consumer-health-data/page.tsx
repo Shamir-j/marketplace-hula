@@ -6,14 +6,14 @@ import InfoIcon from "@mui/icons-material/Info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consumer Health Data Privacy - Pixel Point ERP Platform | Health Data Protection",
-    description: "The Pixel Point ERP Platform's comprehensive consumer health data privacy disclosure. We protect your health data with enterprise-grade security. CHPA compliant.",
-    keywords: "health data privacy, health information protection, CHPA, consumer health data, privacy protection",
+    title: "Consumer Health Data Privacy - Hula Market | Health Data Protection",
+    description: "Hula Market's consumer health data privacy disclosure. Learn how we protect your health data with enterprise-grade security across our marketplace.",
+    keywords: "health data privacy, health information protection, CHPA, consumer health data, privacy protection, Hula Market",
     openGraph: {
-        title: "Consumer Health Data Privacy - Pixel Point ERP Platform",
-        description: "Your health data is protected with enterprise-grade security across all platform applications",
+        title: "Consumer Health Data Privacy - Hula Market",
+        description: "Your health data is protected with enterprise-grade security across Hula Market applications",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/consumer-health-data",
+        url: "https://hula.co.ke/legal/consumer-health-data",
     },
 };
 
@@ -390,7 +390,7 @@ export default function ConsumerHealthDataPrivacy() {
                         Health-Related Emails
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        You can unsubscribe from all health product emails at any time. Click "Unsubscribe" at the bottom of health-related emails or contact privacy@hulamarket.co.ke.
+                        You can unsubscribe from all health product emails at any time. Click "Unsubscribe" at the bottom of health-related emails or contact privacy@hula.co.ke.
                     </Typography>
                 </Box>
 
@@ -475,7 +475,7 @@ export default function ConsumerHealthDataPrivacy() {
                                 Email us with the type of request:
                             </Typography>
                             <Typography sx={{ mb: 0.5 }}>
-                                <strong>Email:</strong> privacy@hulamarket.co.ke
+                                <strong>Email:</strong> privacy@hula.co.ke
                             </Typography>
                             <Typography sx={{ mb: 0.5 }}>
                                 <strong>Subject:</strong> Health Data Request [Access/Delete/Opt-Out/Correction]

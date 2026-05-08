@@ -5,14 +5,14 @@ import InfoIcon from "@mui/icons-material/Info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Cookie Policy - Pixel Point ERP Platform | Cookie Usage & Management",
-    description: "Learn about how the Pixel Point ERP Platform uses cookies and similar tracking technologies. Manage your cookie preferences and understand your choices.",
-    keywords: "cookies, tracking, privacy, cookie policy, cookie consent, data collection",
+    title: "Cookie Policy - Hula Market | Pixel Point ERP Platform",
+    description: "Learn about how Hula Market uses cookies and similar tracking technologies. Manage your cookie preferences and understand your choices across our platform applications.",
+    keywords: "cookies, tracking, privacy, cookie policy, cookie consent, data collection, Hula Market",
     openGraph: {
-        title: "Cookie Policy - Pixel Point ERP Platform",
+        title: "Cookie Policy - Hula Market",
         description: "Understand how we use cookies and manage your cookie preferences",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/cookie-policy",
+        url: "https://hula.co.ke/legal/cookie-policy",
     },
 };
 
@@ -537,7 +537,7 @@ export default function CookiePolicy() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 For questions about our use of cookies:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: privacy@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Subject: "Cookie Policy Inquiry"</Typography>
                             <Typography>Address: Continuum Technologies, 11011-00111 GPO Nairobi</Typography>
                         </CardContent>

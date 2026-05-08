@@ -6,14 +6,14 @@ import ShieldIcon from "@mui/icons-material/Shield";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Acceptable Use Policy - Pixel Point ERP Platform | Platform Rules & Guidelines",
-    description: "Acceptable Use Policy for the Pixel Point ERP Platform. Learn about prohibited activities, content standards, and consequences for violations.",
-    keywords: "acceptable use, platform rules, prohibited activities, content policy, terms of use",
+    title: "Acceptable Use Policy - Hula Market | Pixel Point ERP Platform",
+    description: "Acceptable Use Policy for Hula Market. Learn about prohibited activities, content standards, and consequences for violations on our marketplace.",
+    keywords: "acceptable use, platform rules, prohibited activities, content policy, terms of use, Hula Market",
     openGraph: {
-        title: "Acceptable Use Policy - Pixel Point ERP Platform",
-        description: "Platform rules, prohibited activities, and acceptable behavior guidelines",
+        title: "Acceptable Use Policy - Hula Market",
+        description: "Hula Market's rules, prohibited activities, and acceptable behavior guidelines",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/acceptable-use",
+        url: "https://hula.co.ke/legal/acceptable-use",
     },
 };
 
@@ -487,13 +487,13 @@ export default function AcceptableUsePolicy() {
                         <List dense>
                             <ListItem>
                                 <ListItemText 
-                                    primary="Email: abuse@hulamarket.co.ke"
+                                    primary="Email: abuse@hula.co.ke"
                                     secondary="For general policy violations"
                                 />
                             </ListItem>
                             <ListItem>
                                 <ListItemText 
-                                    primary="Email: legal@hulamarket.co.ke"
+                                    primary="Email: legal@hula.co.ke"
                                     secondary="For legal issues, copyright, or trademark violations"
                                 />
                             </ListItem>
@@ -561,7 +561,7 @@ export default function AcceptableUsePolicy() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 For questions about this policy:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: legal@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: legal@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Subject: "Acceptable Use Policy Inquiry"</Typography>
                             <Typography>Address: Continuum Technologies, 11011-00111 GPO Nairobi</Typography>
                         </CardContent>

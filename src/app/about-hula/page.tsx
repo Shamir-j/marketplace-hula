@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "About Hula Market - Connecting East Africa",
     description: "Discover the story behind Hula Market and our commitment to transforming online commerce",
     type: "website",
-    url: "https://hulamarket.co.ke/about-hula",
+    url: "https://hula.co.ke/about-hula",
   },
 };
 
@@ -574,7 +574,7 @@ export default function AboutHula() {
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>General Inquiries</Typography>
-                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>hello@hulamarket.co.ke</Typography>
+                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>hello@hula.co.ke</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -583,7 +583,7 @@ export default function AboutHula() {
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>Customer Support</Typography>
-                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>support@hulamarket.co.ke</Typography>
+                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>support@hula.co.ke</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -592,7 +592,7 @@ export default function AboutHula() {
                             <Card sx={{ backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}>
                                 <CardContent>
                                     <Typography sx={{ fontWeight: "700", mb: 1 }}>Seller Support</Typography>
-                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>sellers@hulamarket.co.ke</Typography>
+                                    <Typography sx={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.9)" }}>sellers@hula.co.ke</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>

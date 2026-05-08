@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Hula Market - Your Trusted Online Marketplace",
     description: "Shop millions of products with fast delivery and buyer protection",
     type: "website",
-    url: "https://hulamarket.co.ke",
+    url: "https://hula.co.ke",
   },
 };
 

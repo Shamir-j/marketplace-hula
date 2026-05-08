@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import AdvertisingCarousel from "@/components/AdvertisingCarousel";
 import HeroSection from "@/components/home/HeroSection";
 import CategoryCarousel from "@/components/home/CategoryCarousel";
@@ -33,6 +33,23 @@ const HomeContent: React.FC = () => {
                     position: "relative",
                     zIndex: 1
                 }}>
+                    {/* SEO H1 Tag */}
+                    <Typography 
+                        variant="h1" 
+                        sx={{ 
+                            fontSize: { xs: "24px", sm: "32px", md: "40px" }, 
+                            fontWeight: "900", 
+                            color: "#232f3e", 
+                            textAlign: "center",
+                            mt: 4,
+                            mb: -2,
+                            zIndex: 2,
+                            position: "relative"
+                        }}
+                    >
+                        East Africa's Trusted Online Marketplace
+                    </Typography>
+
                     {/* HERO SECTION - OVERLAYING CAROUSEL */}
                     <HeroSection cardGap={cardGap} />
 

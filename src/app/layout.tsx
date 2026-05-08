@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hulamarket.co.ke",
+    url: "https://hula.co.ke",
     siteName: "Hula Market",
     title: "Hula Market - East Africa's Leading Online Marketplace",
     description: "Shop and sell on East Africa's most trusted e-commerce platform. Great deals, fast shipping, secure payments.",
     images: [
       {
-        url: "https://hulamarket.co.ke/og-image.png",
+        url: "https://hula.co.ke/og-image.png",
         width: 1200,
         height: 630,
         alt: "Hula Market - Online Shopping in East Africa",
@@ -55,11 +55,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hula Market - East Africa's Online Marketplace",
     description: "Buy and sell on Hula Market. Trusted by thousands of customers across Kenya, Uganda, Tanzania, and Rwanda.",
-    images: ["https://hulamarket.co.ke/og-image.png"],
+    images: ["https://hula.co.ke/og-image.png"],
     creator: "@HulaMarket",
   },
   alternates: {
-    canonical: "https://hulamarket.co.ke",
+    canonical: "https://hula.co.ke",
   },
   verification: {
     google: "google-site-verification-code",
@@ -87,6 +87,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Hula Market",
+              "url": "https://hula.co.ke",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://hula.co.ke/results-page?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Hula Market",
+              "url": "https://hula.co.ke",
+              "logo": "https://hula.co.ke/logo.png",
+              "sameAs": [
+                "https://facebook.com/hulamarket",
+                "https://twitter.com/hulamarket",
+                "https://instagram.com/hulamarket"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* <MUIThemeProvider> */}
           <Header />

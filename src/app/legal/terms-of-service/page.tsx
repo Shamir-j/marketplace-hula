@@ -5,14 +5,14 @@ import GavelIcon from "@mui/icons-material/Gavel";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Conditions of Use - Pixel Point ERP Platform | Terms & Conditions",
-    description: "Review the Pixel Point ERP Platform's Conditions of Use. Understand your rights and responsibilities when using applications powered by our platform.",
-    keywords: "terms and conditions, conditions of use, user agreement, terms of service",
+    title: "Terms of Service - Hula Market | Pixel Point ERP Platform",
+    description: "Review the Hula Market Terms of Service and Conditions of Use. Understand your rights and responsibilities when using our marketplace and Pixel Point powered applications.",
+    keywords: "terms and conditions, conditions of use, user agreement, terms of service, Hula Market",
     openGraph: {
-        title: "Conditions of Use - Pixel Point ERP Platform",
-        description: "Read the Pixel Point ERP Platform's terms and conditions for all applications",
+        title: "Terms of Service - Hula Market",
+        description: "Read Hula Market's terms and conditions for all applications",
         type: "website",
-        url: "https://hulamarket.co.ke/legal/terms-of-service",
+        url: "https://hula.co.ke/legal/terms-of-service",
     },
 };
 
@@ -731,8 +731,8 @@ export default function ConditionsOfUse() {
                             <Typography sx={{ mb: 1 }}>
                                 <strong>For questions about these Terms and Conditions:</strong>
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: legal@hulamarket.co.ke</Typography>
-                            <Typography sx={{ mb: 0.5 }}>Support Portal: support.hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: legal@hula.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Support Portal: support.hula.co.ke</Typography>
                             <Typography>Address: Continuum Technologies, 11011-00111 GPO Nairobi</Typography>
                         </CardContent>
                     </Card>

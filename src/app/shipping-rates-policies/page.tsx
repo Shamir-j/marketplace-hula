@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Shipping Rates & Policies - Hula Market",
     description: "Fast and affordable shipping options across East Africa",
     type: "website",
-    url: "https://hulamarket.co.ke/shipping-rates-policies",
+    url: "https://hula.co.ke/shipping-rates-policies",
   },
 };
 
@@ -373,7 +373,7 @@ export default function ShippingRatesPolicies() {
                                 <ListItemText primary="Include order number, tracking number, and detailed description" />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Contact support@hulamarket.co.ke with claim details" />
+                                <ListItemText primary="Contact support@hula.co.ke with claim details" />
                             </ListItem>
                         </List>
                     </Box>
@@ -407,7 +407,7 @@ export default function ShippingRatesPolicies() {
                         6. International Shipping (Coming Soon)
                     </Typography>
                     <Typography sx={{ color: "#555", lineHeight: 1.7 }}>
-                        Hula Market is expanding international shipping capabilities. We currently offer limited cross-border services to selected East African countries. International shipments are subject to customs duties and import taxes which are the responsibility of the buyer. For updates on international shipping availability, contact support@hulamarket.co.ke.
+                        Hula Market is expanding international shipping capabilities. We currently offer limited cross-border services to selected East African countries. International shipments are subject to customs duties and import taxes which are the responsibility of the buyer. For updates on international shipping availability, contact support@hula.co.ke.
                     </Typography>
                 </Box>
 
@@ -423,7 +423,7 @@ export default function ShippingRatesPolicies() {
                             <Typography sx={{ mb: 2, fontWeight: "bold" }}>
                                 For shipping inquiries or concerns:
                             </Typography>
-                            <Typography sx={{ mb: 0.5 }}>Email: support@hulamarket.co.ke</Typography>
+                            <Typography sx={{ mb: 0.5 }}>Email: support@hula.co.ke</Typography>
                             <Typography sx={{ mb: 0.5 }}>Phone: +254 (0) 700-123-456</Typography>
                             <Typography sx={{ mb: 1 }}>Hours: Monday-Friday 9:00 AM - 6:00 PM EAT</Typography>
                             <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic", color: "#666" }}>

@@ -11,19 +11,19 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^6.5.0",
-    "@mui/material": "^6.5.0",
-    "next": "^16.1.0",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "@mui/icons-material": "^9.0.1",
+    "@mui/material": "^9.0.1",
+    "next": "^16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
-    "@types/node": "^20.19.27",
-    "@types/react": "^18.3.27",
-    "@types/react-dom": "^18.3.7",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "15.0.2",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.3.0",
+    "eslint-config-next": "16.2.6",
+    "typescript": "^6.0.3"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

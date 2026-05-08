@@ -1,16 +1,17 @@
 "use client";
 
 import { Box, Typography, InputBase, IconButton, Button, MenuItem, Select, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
-import { Search, ShoppingCart, Menu as MenuIcon, Close as CloseIcon, AccountCircle, LocationOn, Language, ChevronRight } from "@mui/icons-material";
+import { Search, ShoppingCart, Menu as MenuIcon, Close as CloseIcon, AccountCircle, LocationOn, Language, ChevronRight, ArrowDropDown } from "@mui/icons-material";
 import Link from "next/link";
 import React, { useState } from "react";
+import DepartmentsDropdown from "./DepartmentsDropdown";
 
 const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
-    const [selectedValue, setSelectedValue] = useState("option1");
+    const [selectedValue, setSelectedValue] = useState("All");
 
     const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setSelectedValue(event.target.value);
@@ -78,41 +79,94 @@ const Header = () => {
                             sx={{
                                 backgroundColor: "white",
                                 borderRadius: "4px",
-                                width: { xs: "100%", sm: "500px", md: "600px", lg: "700px" },
-                                overflow: "hidden",
+                                width: "70%",
+                                overflow: "visible",
+                                border: "3px solid transparent",
+                                "&:focus-within": {
+                                    borderColor: "#FF9900",
+                                },
                             }}
                         >
                             <Select
                                 value={selectedValue}
                                 onChange={handleChange}
                                 displayEmpty
+                                IconComponent={ArrowDropDown}
+                                MenuProps={{
+                                    PaperProps: {
+                                        sx: {
+                                            maxHeight: "500px",
+                                            marginTop: "4px",
+                                            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                                            "& .MuiMenuItem-root": {
+                                                fontSize: "13px",
+                                                padding: "8px 16px",
+                                                "&:hover": {
+                                                    backgroundColor: "#f0f2f2",
+                                                },
+                                            },
+                                        },
+                                    },
+                                }}
                                 sx={{
-                                    minWidth: "80px",
-                                    paddingX: 1,
+                                    minWidth: "50px",
+                                    paddingLeft: "10px",
+                                    paddingRight: "4px",
                                     backgroundColor: "#f3f3f3",
                                     border: "none",
-                                    borderRight: "1px solid #ddd", "& .MuiOutlinedInput-notchedOutline": { border: "none" },
-                                    fontSize: "13px",
+                                    borderRight: "1px solid #cdcdcd",
+                                    borderRadius: "4px 0 0 4px",
+                                    "& .MuiOutlinedInput-notchedOutline": { border: "none" },
+                                    "& .MuiSelect-select": {
+                                        fontSize: "13px",
+                                        paddingRight: "24px !important",
+                                        color: "#0F1111",
+                                        fontWeight: "400",
+                                    },
+                                    "&:hover": {
+                                        backgroundColor: "#e3e6e6",
+                                    },
+                                    "& .MuiSvgIcon-root": {
+                                        color: "#6b6b6b",
+                                        fontSize: "20px",
+                                    },
                                 }}
                                 size="small"
                             >
-                                <MenuItem value="option1">All</MenuItem>
-                                <MenuItem value="option2">Electronics</MenuItem>
-                                <MenuItem value="option3">Clothing</MenuItem>
-                                <MenuItem value="option4">Health & Wellness</MenuItem>
-                                <MenuItem value="option5">Beauty & Personal Care</MenuItem>
-                                <MenuItem value="option6">Home & Kitchen</MenuItem>
-                                <MenuItem value="option7">Sports & Outdoors</MenuItem>
-                                <MenuItem value="option8">Books & Stationery</MenuItem>
-                                <MenuItem value="option9">Toys & Games</MenuItem>
-                                <MenuItem value="option10">Baby Products</MenuItem>
+                                <MenuItem value="All">All</MenuItem>
+                                <MenuItem value="Arts & Crafts">Arts & Crafts</MenuItem>
+                                <MenuItem value="Automotive">Automotive</MenuItem>
+                                <MenuItem value="Baby">Baby</MenuItem>
+                                <MenuItem value="Beauty & Personal Care">Beauty & Personal Care</MenuItem>
+                                <MenuItem value="Books">Books</MenuItem>
+                                <MenuItem value="Boys' Fashion">Boys' Fashion</MenuItem>
+                                <MenuItem value="Computers">Computers</MenuItem>
+                                <MenuItem value="Deals">Deals</MenuItem>
+                                <MenuItem value="Digital Music">Digital Music</MenuItem>
+                                <MenuItem value="Electronics">Electronics</MenuItem>
+                                <MenuItem value="Girls' Fashion">Girls' Fashion</MenuItem>
+                                <MenuItem value="Health & Household">Health & Household</MenuItem>
+                                <MenuItem value="Home & Kitchen">Home & Kitchen</MenuItem>
+                                <MenuItem value="Industrial & Scientific">Industrial & Scientific</MenuItem>
+                                <MenuItem value="Kindle Store">Kindle Store</MenuItem>
+                                <MenuItem value="Luggage">Luggage</MenuItem>
+                                <MenuItem value="Men's Fashion">Men's Fashion</MenuItem>
+                                <MenuItem value="Movies & TV">Movies & TV</MenuItem>
+                                <MenuItem value="Music, CDs & Vinyl">Music, CDs & Vinyl</MenuItem>
+                                <MenuItem value="Pet Supplies">Pet Supplies</MenuItem>
+                                <MenuItem value="Sports & Outdoors">Sports & Outdoors</MenuItem>
+                                <MenuItem value="Tools & Home Improvement">Tools & Home Improvement</MenuItem>
+                                <MenuItem value="Toys & Games">Toys & Games</MenuItem>
+                                <MenuItem value="Video Games">Video Games</MenuItem>
+                                <MenuItem value="Women's Fashion">Women's Fashion</MenuItem>
                             </Select>
                             <InputBase
                                 sx={{
                                     flex: 1,
                                     paddingX: 1.5,
-                                    fontWeight: "500",
+                                    fontWeight: "400",
                                     fontSize: "14px",
+                                    color: "#0F1111",
                                 }}
                                 placeholder="Search Hula Market"
                             />
@@ -121,7 +175,7 @@ const Header = () => {
                                 sx={{
                                     backgroundColor: "#FF9900",
                                     borderRadius: "0px 4px 4px 0px",
-                                    color: "white",
+                                    color: "#0F1111",
                                     padding: "8px 16px",
                                     "&:hover": { backgroundColor: "#e68a00" },
                                 }}
@@ -305,7 +359,7 @@ const Header = () => {
                 </Box>
             ) : (
                 // Desktop: Dark green navigation bar with "All" button
-                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "8px 16px" }}>
+                <Box sx={{ backgroundColor: "#085749", color: "white", padding: "8px 16px", position: "relative" }}>
                     <Box display="flex" alignItems="center" gap={2}>
                         {/* All Button with Menu Icon */}
                         <Button
@@ -339,10 +393,11 @@ const Header = () => {
                             </Button>
                         ))}
                     </Box>
+                
                 </Box>
             )}
 
-            {/* Mobile Drawer Menu */}
+              {/* Mobile Drawer Menu */}
             <Drawer
                 anchor="left"
                 open={mobileMenuOpen}
@@ -682,6 +737,8 @@ const Header = () => {
                     </List>
                 </Box>
             </Drawer>
+
+          
         </Box>
     );
 };
